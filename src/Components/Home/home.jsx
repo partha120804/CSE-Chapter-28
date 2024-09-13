@@ -3,8 +3,8 @@ import ChapterLogo from '../../assets/logo/chapterlogo.svg'
 function home() {
   return (
     <div>
-        <div className='flex justify-center align-middle'>
-            <img className='h-[400px] w-[700px]' src={ChapterLogo}/>
+        <div className='flex justify-center align-middle h-[80vh] w-[100vw]'>
+            <img className='h-[45vh] w-[50vw]' src={ChapterLogo}/>
         </div>
         
     </div>

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-  background-image: url('./assets/bgcrop.png');
+  background-image: url('./assets/bgnlcrop.png');
   background-size:cover;
   height: 100wh;
   background-repeat: no-repeat;

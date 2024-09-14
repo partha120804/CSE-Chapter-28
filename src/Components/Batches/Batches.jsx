@@ -1,12 +1,8 @@
-import React from "react";
-import { useState } from "react";
-import image from "../../assets/default.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faInstagram,
-  faGithub,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import React from 'react'
+import {useState} from 'react'
+import image from '../../assets/default.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faGithub, faLinkedin,faEnvelope} from '@fortawesome/free-brands-svg-icons';
 function Batches() {
   const [pop, popState] = useState("hidden");
   return (
@@ -43,6 +39,7 @@ function Batches() {
           <FontAwesomeIcon className="size-7" icon={faInstagram} />
           <FontAwesomeIcon className="size-7" icon={faGithub} />
           <FontAwesomeIcon className="size-7" icon={faLinkedin} />
+          <FontAwesomeIcon className="size-7" icon={faEnvelope} />
         </div>
       </div>
     </div>

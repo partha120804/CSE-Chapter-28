@@ -57,7 +57,7 @@ function ProfileCard() {
     <div  className="flex flex-wrap gap-3 justify-center max-w-[100vw]">
       <div onClick={popdown} ref={modelRef} className={`flex justify-center items-center inset-0 fixed z-10 backdrop-blur-sm  ${pop}`}>
       <div
-        className={` bg-white bg-opacity-[20%] onClickPopUp w-[60%] h-[70%] backdrop-blur-md border-4 border-opacity-30 rounded-xl border-[#E1E1E1] flex flex-row align-center items-center`}
+        className={` bg-white bg-opacity-[20%] onClickPopUp w-[60%] h-[70%] backdrop-blur-[15px] border-4 border-opacity-30 rounded-xl border-[#E1E1E1] flex flex-row align-center items-center`}
       >
         <div className="flex flex-col justify-center m-3  w-[40%] h-[95%]  my-8 ">
           <div className="flex justify-between flex-col items-center h-[80%] w-[100%]">
@@ -83,7 +83,7 @@ function ProfileCard() {
           <div className=" h-[80%] w-[90%]">
             <p className="text-3xl text-center font-bold">About Me</p>
             <div className="flex justify-center items-center h-[85%]">
-              <div className=" border-[15px] border-transparent w-[100%] bg-white bg-opacity-30 rounded-md">
+              <div className=" border-[15px] border-transparent w-[100%] bg-white bg-opacity-35 rounded-md">
                 <p className="text-2xl">{description}</p>
               </div>
             </div>

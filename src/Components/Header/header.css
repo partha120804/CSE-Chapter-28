@@ -8,3 +8,12 @@
 .lightcolor{
     color: #004040;
 }
+
+@font-face {
+    font-family: 'SofiaSEC';
+    src: url('../../assets/font/Sofia_Sans_Extra_Condensed/SofiaSansExtraCondensed-ExtraBold.ttf') format('truetype');
+  }
+
+.header{
+    font-family: 'SofiaSEC', sans-serif;
+}

@@ -10,7 +10,7 @@ function header() {
           <div>
             <img className=" ml-5 w-28 h-20"  src={logo}/>
           </div>
-          <div class='header'>
+          <div className='header'>
           <ul className="flex flex-col text-[2.25rem] mt-6 mr-8 font-bold lg:flex-row lg:space-x-8 h-20">
                             <li>
                                 <NavLink to="/"

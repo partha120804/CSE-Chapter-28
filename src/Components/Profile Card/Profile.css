@@ -1,0 +1,40 @@
+
+  .popup {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .popup-content {
+    animation: popupAnimation 0.4s ease-out forwards;
+  }
+
+  @keyframes popupAnimation {
+    0% {
+      transform: scale(0.7);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+ 
+  /* .close-popup-btn {
+    padding: 8px 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  } */
+  

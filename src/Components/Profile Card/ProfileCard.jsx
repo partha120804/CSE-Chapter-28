@@ -54,7 +54,7 @@ function ProfileCard() {
   };
 
   return (
-    <div  className="flex flex-wrap gap-3 justify-center max-w-[100vw]">
+    <div  className="flex flex-wrap gap-3 justify-center w-[100vw]">
       <div onClick={popdown} ref={modelRef} className={`flex justify-center items-center inset-0 fixed z-10 backdrop-blur-sm  ${pop}`}>
       <div
         className={` bg-white bg-opacity-[20%] onClickPopUp w-[60%] h-[70%] backdrop-blur-[15px] border-4 border-opacity-30 rounded-xl border-[#E1E1E1] flex flex-row align-center items-center`}

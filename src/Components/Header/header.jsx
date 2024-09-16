@@ -10,12 +10,12 @@ function header() {
           <div>
             <img className=" ml-5 w-28 h-20"  src={logo}/>
           </div>
-          <div class='header'>
+          <div className='header'>
           <ul className="flex flex-col text-[2.25rem] mt-6 mr-8 font-bold lg:flex-row lg:space-x-8 h-20">
-                            <li>
+                            <li >
                                 <NavLink to="/"
                                     className={({isActive}) =>
-                                        `block py-2 pr-4 pl-3 duration-200 ${isActive?"textcolor underline":"lightcolor"}  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0  lg:p-0`
+                                        `block py-2  pr-4 pl-3 duration-200 ${isActive?"textcolor underline":"lightcolor"}  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0  lg:p-0`
                                     }
                                 >
                                     HOME

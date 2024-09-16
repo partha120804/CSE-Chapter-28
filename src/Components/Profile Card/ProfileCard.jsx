@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { useState, useRef } from "react";
 import image from "../../assets/default.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import './Profile.css';
+import close from '../../assets/close.svg';
 import {
   faInstagram,
   faGithub,
@@ -9,6 +11,8 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
+
+ 
 
 function ProfileCard() {
   const [data, setData] = useState([]);
@@ -55,11 +59,11 @@ function ProfileCard() {
 
   return (
     <div  className="flex flex-wrap gap-3 justify-center max-w-[100vw]">
-      <div onClick={popdown} ref={modelRef} className={`flex justify-center items-center inset-0 fixed z-10 backdrop-blur-sm  ${pop}`}>
+      <div onClick={popdown} ref={modelRef} className={` popup flex justify-center items-center inset-0 fixed z-10 backdrop-blur-sm  ${pop}` }>
       <div
-        className={` bg-white bg-opacity-[20%] onClickPopUp w-[60%] h-[70%] backdrop-blur-[15px] border-4 border-opacity-30 rounded-xl border-[#E1E1E1] flex flex-row align-center items-center`}
+        className={` bg-white bg-opacity-[20%] onClickPopUp w-[60%] h-[70%] backdrop-blur-[15px] border-4 border-opacity-30 rounded-xl border-[#E1E1E1] flex flex-row align-center items-center popup-content`}
       >
-        <div className="flex flex-col justify-center m-3  w-[40%] h-[95%]  my-8 ">
+        <div className="flex flex-col justify-center m-3  w-[40%] h-[95%]  my-8 popup-content">
           <div className="flex justify-between flex-col items-center h-[80%] w-[100%]">
             <div className=" h-[100%] ">
               <div className="relative h-[75%]">
@@ -83,15 +87,14 @@ function ProfileCard() {
           <div className=" h-[80%] w-[90%]">
             <p className="text-3xl text-center font-bold">About Me</p>
             <div className="flex justify-center items-center h-[85%]">
-              <div className=" border-[15px] border-transparent w-[100%] bg-white bg-opacity-35 rounded-md">
-                <p className="text-2xl">{description}</p>
-              </div>
+              <textarea className="font-semibold text-2xl h-[80%] border-[15px] border-transparent w-[100%] bg-white bg-opacity-35 rounded-md resize-none placeholder-[#002f26] " disabled placeholder={description}  />
+               
             </div>
             <div className="flex justify-around">
-              <FontAwesomeIcon className="size-7" icon={faInstagram} />
-              <FontAwesomeIcon className="size-7" icon={faGithub} />
-              <FontAwesomeIcon className="size-7" icon={faLinkedin} />
-              <FontAwesomeIcon className="size-7" icon={faEnvelope} />
+              <FontAwesomeIcon className="size-7 hover:shadow-lg  transition duration-300 ease-in-out hover:scale-[1.5] transform   " icon={faInstagram} />
+              <FontAwesomeIcon className="size-7 hover:shadow-lg   transition duration-300 ease-in-out hover:scale-[1.5] transform" icon={faGithub} />
+              <FontAwesomeIcon className="size-7 hover:shadow-lg   transition duration-300 ease-in-out hover:scale-[1.5] transform" icon={faLinkedin} />
+              <FontAwesomeIcon className="size-7 hover:shadow-lg   transition duration-300 ease-in-out hover:scale-[1.5] transform" icon={faEnvelope} />
             </div>
           </div>
         </div>
@@ -102,7 +105,7 @@ function ProfileCard() {
           <div className="m-4 z-1">
             <div
               onClick={() => popup(item)}
-              className="pcard  h-[400px] w-[275px] backdrop-blur-md backdrop-brightness-[85%] hover:backdrop-brightness-[60%] transition-backdrop-brightness duration-500 border-2 rounded-xl border-[#E1E1E1] border-opacity-30 flex justify-around items-center flex-col text-[#002020] hover:text-[#ffffff]"
+              className="pcard  h-[400px] w-[275px] backdrop-blur-md backdrop-brightness-[85%] hover:backdrop-brightness-[60%] transition-backdrop-brightness duration-500 border-2 rounded-xl border-[#E1E1E1] border-opacity-30 flex justify-around items-center flex-col text-[#002020] hover:text-[#ffffff] hover:scale-[1.05] transform transition duration-300 ease-in-out"
             >
               <div className="mt-3 rounded-full h-[195px] w-[195px]">
                 <img className="h-[195px] w-[195px] rounded-full" src={image} />
@@ -112,10 +115,10 @@ function ProfileCard() {
                 <p className=" text-2xl">{item.id}</p>
               </div>
               <div className="flex w-[210px] justify-around">
-                <FontAwesomeIcon className="size-7" icon={faInstagram} />
-                <FontAwesomeIcon className="size-7" icon={faGithub} />
-                <FontAwesomeIcon className="size-7" icon={faLinkedin} />
-                <FontAwesomeIcon className="size-7" icon={faEnvelope} />
+                {/* <FontAwesomeIcon className="size-7" icon={faInstagram} /> */}
+                <FontAwesomeIcon className="size-7 hover:shadow-lg  transition duration-300 ease-in-out hover:scale-[1.3] transform " icon={faGithub} />
+                <FontAwesomeIcon className="size-7 hover:shadow-lg  transition duration-300 ease-in-out hover:scale-[1.3] transform" icon={faLinkedin} />
+                <FontAwesomeIcon className="size-7 hover:shadow-lg  transition duration-300 ease-in-out hover:scale-[1.3] transform" icon={faEnvelope} />
               </div>
             </div>
           </div>

@@ -26,10 +26,11 @@ function ProfileCard() {
       );
       setData(response.data);
       console.log(response.data);
+      LoadState(true);
     };
     ApiCaller();
     console.log(data[0]);
-    LoadState(true);
+    
   };
   let [name, setName] = useState("");
   let [id, setId] = useState("");
@@ -100,6 +101,7 @@ function ProfileCard() {
         </div>
       </div>
       </div>
+      {console.log(load)}
       {load ? (
         data.map((item) => (
           <div className="m-4 z-1">
@@ -124,7 +126,7 @@ function ProfileCard() {
           </div>
         ))
       ) : (
-        <p className="w-[1000px] h-[50px]">loading....</p>
+        <p className="w-[1000px] h-[50px] font-bold">loading....</p>
       )}
     </div>
   );

@@ -44,7 +44,7 @@ function header() {
 
                             </li>
                             <li>
-                            <NavLink
+                                <NavLink
                                 to="/About"
                                 className={({isActive}) =>
                                     `block py-2 pr-4 pl-3 duration-200 ${isActive?"textcolor underline":"lightcolor"}  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0  lg:p-0`

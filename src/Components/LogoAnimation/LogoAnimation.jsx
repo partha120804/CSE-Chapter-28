@@ -29,8 +29,8 @@ const DivOrigami = () => {
   );
 };
 
-const DELAY_IN_MS = 1500;
-const TRANSITION_DURATION_IN_SECS = 0.7;
+const DELAY_IN_MS = 700;
+const TRANSITION_DURATION_IN_SECS = 0.3;
 
 const LogoRolodex = ({ items }) => {
   const intervalRef = useRef(null);

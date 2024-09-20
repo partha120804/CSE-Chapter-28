@@ -4,6 +4,7 @@ import image from "../../assets/default.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './Profile.css';
 import close from '../../assets/close.svg';
+import DivOrigami from '../LogoAnimation/LogoAnimation.jsx'
 import {
   faInstagram,
   faGithub,
@@ -126,7 +127,7 @@ function ProfileCard() {
           </div>
         ))
       ) : (
-        <p className="w-[1000px] h-[50px] font-bold">loading....</p>
+        <DivOrigami/>
       )}
     </div>
   );

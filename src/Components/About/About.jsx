@@ -1,5 +1,5 @@
 import React from 'react'
-import "./about.css"
+import  "./about.css"
 import AboutCard from './AboutCard'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import mongoicon from "../../assets/logo/mongo.png"
@@ -14,7 +14,7 @@ function about() {
     <div className="max-w-4xl  text-center mt-5 mb-[100px]">
      
     <h1 data-text="About Us"  className=" text-9xl mb-4  font-bold text-[#002F26] css ">
-  About Us
+    About Us
 </h1>
       
       <p className="text-2xl color text-[#d0f0ea] font-[500] stroke">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore ullam veritatis, fugiat molestiae architecto 

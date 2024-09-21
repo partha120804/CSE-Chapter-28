@@ -93,7 +93,7 @@ function ProfileCard() {
                
             </div>
             <div className="flex justify-around">
-              <FontAwesomeIcon className="size-7 hover:shadow-lg  transition duration-300 ease-in-out hover:scale-[1.5] transform   " icon={faInstagram} />
+              <FontAwesomeIcon className="size-7 hover:shadow-lg  transition duration-300 ease-in-out hover:scale-[1.5] transform" icon={faInstagram} />
               <FontAwesomeIcon className="size-7 hover:shadow-lg   transition duration-300 ease-in-out hover:scale-[1.5] transform" icon={faGithub} />
               <FontAwesomeIcon className="size-7 hover:shadow-lg   transition duration-300 ease-in-out hover:scale-[1.5] transform" icon={faLinkedin} />
               <FontAwesomeIcon className="size-7 hover:shadow-lg   transition duration-300 ease-in-out hover:scale-[1.5] transform" icon={faEnvelope} />

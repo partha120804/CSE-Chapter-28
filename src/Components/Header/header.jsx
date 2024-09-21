@@ -11,8 +11,8 @@ function header() {
         console.log(user.email);
         const email=user.email;
         if(email.slice(0,2)!='b1'){
-            logout();
             alert("Email Invailid");
+            logout();
         }
     }
   return (
@@ -65,20 +65,21 @@ function header() {
                                     ABOUT
                                 </NavLink>
                             </li>
-                            <li>
-                                <button onClick={(e)=>loginWithRedirect()}>Login</button>
-                            </li>
+                            
                             {isAuthenticated?<li>
                             <NavLink
-                                to="/Login"
+                                to="/Profile"
                                 className={({isActive}) =>
                                     `block py-2 pr-4 pl-3 duration-200 ${isActive?"textcolor underline":"lightcolor"}  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0  lg:p-0`
                                 }
                                 >
-                                    LOGIN
+                                    PROFILE
                                 </NavLink>
 
-                            </li>:''}
+                            </li>:
+                            <li>
+                                <button onClick={(e)=>loginWithRedirect()}>LOGIN</button>
+                            </li>}
                             
                         </ul>
           </div>

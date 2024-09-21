@@ -21,7 +21,7 @@ const router = createBrowserRouter(
       <Route path="Gallery" element={<Gallery />} />
       <Route path="Batches" element={<Batches />} />
       <Route path="About" element={<About />} />
-      <Route path="Login" element=  {<Profile />} />
+      <Route path="Profile" element=  {<Profile />} />
     </Route>
   )
 );

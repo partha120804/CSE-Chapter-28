@@ -1,11 +1,20 @@
 import React from "react";
+import { useEffect } from "react";
 import logo from '../../assets/logo/logocse.svg'
 import { NavLink} from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import "./header.css";
 function header() {
-    const {user,loginWithRedirect,isAuthenticated}=useAuth0();
+    const {user,loginWithRedirect,isAuthenticated,logout}=useAuth0();
     console.log(user);
+    if(isAuthenticated){
+        console.log(user.email);
+        const email=user.email;
+        if(email.slice(0,2)!='b1'){
+            logout();
+            console.alert("Email Invailid");
+        }
+    }
   return (
     <div>
       <nav>

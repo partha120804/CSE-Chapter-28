@@ -12,7 +12,7 @@ function header() {
         const email=user.email;
         if(email.slice(0,2)!='b1'){
             logout();
-            console.alert("Email Invailid");
+            alert("Email Invailid");
         }
     }
   return (

@@ -1,8 +1,11 @@
 import React from "react";
 import logo from '../../assets/logo/logocse.svg'
 import { NavLink} from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 import "./header.css";
 function header() {
+    const {user,loginWithRedirect,isAuthenticated}=useAuth0();
+    console.log(user);
   return (
     <div>
       <nav>
@@ -54,6 +57,9 @@ function header() {
                                 </NavLink>
                             </li>
                             <li>
+                                <button onClick={(e)=>loginWithRedirect()}>Login</button>
+                            </li>
+                            {isAuthenticated?<li>
                             <NavLink
                                 to="/Login"
                                 className={({isActive}) =>
@@ -63,7 +69,8 @@ function header() {
                                     LOGIN
                                 </NavLink>
 
-                            </li>
+                            </li>:''}
+                            
                         </ul>
           </div>
         </div>

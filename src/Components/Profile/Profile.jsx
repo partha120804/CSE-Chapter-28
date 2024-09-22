@@ -1,10 +1,40 @@
 import React from 'react'
-
+import { useState,useEffect } from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
+import DivOrigami from '../LogoAnimation/LogoAnimation.jsx'
 function Login() {
+  const [img,setImg]=useState();
+
+  const imagebase64=(file)=>{
+    const reader=new FileReader();
+    reader.readAsDataURL(file);
+    const data=new Promise((resolve,reject)=>{
+      reader.onload=()=>resolve(reader.result);
+      reader.onerror=(err)=>reject(err);
+    })
+    return data;
+  }
+  let ImageInput=async (e)=>{
+    const file=e.target.files[0];
+    const image=await imagebase64(file);
+    setImg(image);
+  }
+  const {data,setData}=useState('');
+  const {user,isAuthenticated}=useAuth0();
+  useEffect(async ()=>{
+    let id=user.email;
+    id=id.slice(0,7);
+    id=id.toUpperCase();
+    const result=await axios.get(`https://cse-chapter-28-server.vercel.app/api/2027/id?id=${id}`);
+    console.log(result.data);
+    setData(result.data);
+  },[])
   return (
     <div>
+    {data?(<div>
+      {img?<img src={img}/>:''};
       <form method='POST'>
-      <input type='file'></input>
+      <input type='file' onChange={ImageInput}></input>
       <br/>
       <br/>
       <input type='text' name='Name' placeholder='Name'></input>
@@ -28,12 +58,14 @@ function Login() {
       <input type='text' name='Mail' placeholder='Mail'></input>
       <br/>
       <br/>
-      <textare className='h-[20px] w-[50px] bg-white' name='Description' placeholder='Description'>ad;fkajsd;lfk</textare>
+      <textarea className='h-[20px] w-[50px] bg-white' name='Description' placeholder='Description'></textarea>
       <br/>
       <br/>
       <input type='submit'/>
       </form>
-    </div>
+    </div>):(<DivOrigami/>)
+  }
+  </div>
   )
 }
 

@@ -79,7 +79,7 @@ function header() {
                                 </NavLink>
                             </li>
                             
-                            {true?<li>
+                            {isAuthenticated?<li>
                             <NavLink
                                 to="/Profile"
                                 className={({isActive}) =>

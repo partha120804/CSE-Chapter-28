@@ -41,7 +41,7 @@ const DivOrigami = () => {
   );
 };
 
-const DELAY_IN_MS = 500;
+const DELAY_IN_MS = 1200;
 const TRANSITION_DURATION_IN_SECS = 0.3;
 
 const LogoRolodex = ({ items }) => {

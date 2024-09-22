@@ -34,7 +34,7 @@ function Login() {
 },[])
   return (
     <div>
-    {data?(<div>
+    {data!=null?(<div>
       {img?<img src={img}/>:''};
       <form method='POST'>
       <input type='file' onChange={ImageInput}></input>

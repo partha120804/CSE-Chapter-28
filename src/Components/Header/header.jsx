@@ -6,6 +6,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import "./header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
+import axios from 'axios';
 function header() {
     const {user,loginWithRedirect,isAuthenticated,logout}=useAuth0();
     if(isAuthenticated){

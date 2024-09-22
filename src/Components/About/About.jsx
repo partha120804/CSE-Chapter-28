@@ -33,7 +33,7 @@ function about() {
     </div>
 </div>
 <h1 className='text-6xl text-white font-semibold mb-10'>TechStack Used</h1>
-<div className='flex flex-row gap-[3em]'>
+<div className='flex flex-row flex-wrap gap-[3em]'>
 <FontAwesomeIcon icon={faReact} className='text-6xl font-semibold' style={{color: "#4ab6c9",}} />
 <FontAwesomeIcon icon={faHtml5} className='text-6xl font-semibold' style={{color: "#f78318",}} />
 <FontAwesomeIcon icon={faCss3Alt} className='text-6xl font-semibold' style={{color: "#0778cf",}} />

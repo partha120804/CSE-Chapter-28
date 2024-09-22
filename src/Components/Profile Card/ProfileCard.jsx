@@ -4,6 +4,7 @@ import image from "../../assets/default.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './Profile.css';
 import close from '../../assets/close.svg';
+import DivOrigami from '../LogoAnimation/LogoAnimation.jsx'
 import {
   faInstagram,
   faGithub,
@@ -92,10 +93,10 @@ function ProfileCard() {
                
             </div>
             <div className="flex justify-around">
-              <FontAwesomeIcon className="size-7 hover:shadow-lg  transition duration-300 ease-in-out hover:scale-[1.5] transform   " icon={faInstagram} />
-              <FontAwesomeIcon className="size-7 hover:shadow-lg   transition duration-300 ease-in-out hover:scale-[1.5] transform" icon={faGithub} />
-              <FontAwesomeIcon className="size-7 hover:shadow-lg   transition duration-300 ease-in-out hover:scale-[1.5] transform" icon={faLinkedin} />
-              <FontAwesomeIcon className="size-7 hover:shadow-lg   transition duration-300 ease-in-out hover:scale-[1.5] transform" icon={faEnvelope} />
+                <FontAwesomeIcon className="size-7  ease-in-out hover:scale-[1.3] transform" icon={faInstagram} />
+                <FontAwesomeIcon className="size-7  ease-in-out hover:scale-[1.3] transform " icon={faGithub} />
+                <FontAwesomeIcon className="size-7  ease-in-out hover:scale-[1.3] transform" icon={faLinkedin} />
+                <FontAwesomeIcon className="size-7  ease-in-out hover:scale-[1.3] transform" icon={faEnvelope} />
             </div>
           </div>
         </div>
@@ -107,7 +108,7 @@ function ProfileCard() {
           <div className="m-4 z-1">
             <div
               onClick={() => popup(item)}
-              className="pcard  h-[400px] w-[275px] backdrop-blur-md backdrop-brightness-[85%] hover:backdrop-brightness-[60%] transition-backdrop-brightness duration-500 border-2 rounded-xl border-[#E1E1E1] border-opacity-30 flex justify-around items-center flex-col text-[#002020] hover:text-[#ffffff] hover:scale-[1.05] transform transition duration-300 ease-in-out"
+              className="pcard  h-[400px] w-[275px] backdrop-blur-md backdrop-brightness-[80%] hover:backdrop-brightness-[60%] border-2 rounded-xl border-[#E1E1E1] border-opacity-30 flex justify-around items-center flex-col text-[#d0f0ea] hover:text-[#ffffff] hover:scale-[1.05] transform transition duration-500 ease-in-out"
             >
               <div className="mt-3 rounded-full h-[195px] w-[195px]">
                 <img className="h-[195px] w-[195px] rounded-full" src={image} />
@@ -118,15 +119,16 @@ function ProfileCard() {
               </div>
               <div className="flex w-[210px] justify-around">
                 {/* <FontAwesomeIcon className="size-7" icon={faInstagram} /> */}
-                <FontAwesomeIcon className="size-7 hover:shadow-lg  transition duration-300 ease-in-out hover:scale-[1.3] transform " icon={faGithub} />
-                <FontAwesomeIcon className="size-7 hover:shadow-lg  transition duration-300 ease-in-out hover:scale-[1.3] transform" icon={faLinkedin} />
-                <FontAwesomeIcon className="size-7 hover:shadow-lg  transition duration-300 ease-in-out hover:scale-[1.3] transform" icon={faEnvelope} />
+                <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform" icon={faInstagram} />
+                <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform " icon={faGithub} />
+                <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform" icon={faLinkedin} />
+                <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform" icon={faEnvelope} />
               </div>
             </div>
           </div>
         ))
       ) : (
-        <p className="w-[1000px] h-[50px] font-bold">loading....</p>
+        <DivOrigami/>
       )}
     </div>
   );

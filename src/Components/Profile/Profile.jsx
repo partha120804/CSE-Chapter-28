@@ -22,7 +22,7 @@ function Login() {
   }
   const {data,setData}=useState([]);
   const {user,isAuthenticated}=useAuth0();
-  useEffect(()=>{
+  let loadApi=()=>{
     let FunctionToBeCalled=async ()=>{
     let id=user.email;
     id=id.slice(0,7);
@@ -35,7 +35,8 @@ function Login() {
   }
   setLoad(false);
   FunctionToBeCalled();
-},[])
+};
+  useEffect(loadApi,[])
   return (
     <div>
     {loading?(<div>

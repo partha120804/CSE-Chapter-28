@@ -21,11 +21,16 @@ function header() {
                 "id": id,
                 });
             if(check.data==[]){
+                try{
                 await axios.post('https://cse-chapter-28-server.vercel.app/api/'+year+'/add',params,{
                     "headers": {
                     "content-type": "application/json",
                     },
                 });
+                }
+                catch(err){
+                    console.error(err.message);
+                }
             }
 
     }

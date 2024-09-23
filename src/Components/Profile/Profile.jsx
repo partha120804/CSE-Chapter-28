@@ -73,6 +73,7 @@ function Login() {
       <textarea className='h-[20px] w-[50px] bg-white' name='description' placeholder='Description' value={data[0].Description}></textarea>
       <br/>
       <br/>
+      <input type='text' hidden name="image" value={img}/>
       <input  type='submit'/>
       </form>
     </div>):(<DivOrigami/>)

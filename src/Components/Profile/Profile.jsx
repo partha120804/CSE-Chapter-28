@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState,useEffect } from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
+import DefaultPfp from '../../assets/logo/default.jpg'
 import DivOrigami from '../LogoAnimation/LogoAnimation.jsx'
 import axios from 'axios';
 function Login() {
@@ -33,6 +34,7 @@ function Login() {
     console.log(result.data);
     setLoad(true);
     console.log(loading);
+    setImg(data[0].image);
   }
   setLoad(false);
   FunctionToBeCalled();
@@ -41,8 +43,8 @@ function Login() {
   return (
     <div>
     {loading?(<div>
-      {img?<img src={img}/>:'https://cse-chapter-28-server.vercel.app/api/2027/profile'};
-      <form method='POST' action=''>
+      {img?<img src={img}/>:<img src={DefaultPfp}/>};
+      <form method='POST' action='https://cse-chapter-28-server.vercel.app/api/2027/profile'>
       <input type='file' onChange={ImageInput}></input>
       <br/>
       <br/>

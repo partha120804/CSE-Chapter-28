@@ -21,7 +21,8 @@ function header() {
                 "name": user.name,
                 "id": id,
             });
-            if(check.data==[]){
+            console.log(check.data.length);
+            if(check.data.length==0){
                 try{
                 await axios.post('http://localhost:3000/api/'+year+'/add',params,{
                     "headers": {

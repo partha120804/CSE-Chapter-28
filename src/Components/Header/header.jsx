@@ -17,14 +17,10 @@ function header() {
             let id=user.email.slice(0,7);
             const check=await axios.get('https://cse-chapter-28-server.vercel.app/api/'+year+'/id?id='+id);
             console.log(check);
-            const params = JSON.stringify({
-                "name": user.name,
-                "id": id,
-            });
             console.log(check.data.length);
             if(check.data.length==0){
                 try{
-                await axios.post('http://localhost:3000/api/'+year+'/add?name='+user.name+'&id='+id);
+                await axios.post('http://localhost:3000/api/'+year+'/add?name='+user.name+'&id='+id.toUpperCase);
                 }
                 catch(err){
                     console.error(err.message);

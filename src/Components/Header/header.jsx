@@ -10,7 +10,7 @@ import axios from "axios";
 function header() {
     const {user,loginWithRedirect,isAuthenticated,logout}=useAuth0();
 
-
+    console.log(user);
     let newAccount=async ()=>{
         let year="20"+(email.slice(2,4)+4);
             let id=email.slice(0,7);

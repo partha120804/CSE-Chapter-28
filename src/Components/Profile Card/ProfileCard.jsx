@@ -54,7 +54,7 @@ function ProfileCard() {
       setLinkedIn(item.LinkedIn);
       setGitHub(item.GitHub);
       setFid(item.id);
-      setPfp(item.Image);
+      setPfp(item.image);
     }
     popState("visible");
   };

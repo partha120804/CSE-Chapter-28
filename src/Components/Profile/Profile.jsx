@@ -34,7 +34,7 @@ function Login() {
     console.log(result.data);
     setLoad(true);
     console.log(loading);
-    setImg(dt[0].image);
+    setImg(dt[0].image?dt[0].image:'');
   }
   setLoad(false);
   FunctionToBeCalled();

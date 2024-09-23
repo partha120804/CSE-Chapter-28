@@ -24,11 +24,7 @@ function header() {
             console.log(check.data.length);
             if(check.data.length==0){
                 try{
-                await axios.post('http://localhost:3000/api/'+year+'/add',params,{
-                    "headers": {
-                    "content-type": "application/json",
-                    },
-                });
+                await axios.post('http://localhost:3000/api/'+year+'/add?name='+user.name+'&id='+id);
                 }
                 catch(err){
                     console.error(err.message);

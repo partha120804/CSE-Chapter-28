@@ -34,7 +34,7 @@ function Login() {
     console.log(result.data);
     setLoad(true);
     console.log(loading);
-    setImg(data[0].image);
+    setImg(dt[0].image);
   }
   setLoad(false);
   FunctionToBeCalled();
@@ -49,7 +49,7 @@ function Login() {
     {loading?(<div>
       <img src={img?img:DefaultPfp}/>
       <form method='POST' action='https://cse-chapter-28-server.vercel.app/api/2027/profile'>
-      <input type='file' name='img' onChange={ImageInput}></input>
+      <input type='file' onChange={ImageInput}></input>
       <br/>
       <br/>
       <input readOnly type='text' name='name' placeholder="Name" value={data[0].name}></input>

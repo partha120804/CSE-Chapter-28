@@ -20,7 +20,7 @@ function Login() {
     const image=await imagebase64(file);
     setImg(image);
   }
-  const {data,setData}=useState('');
+  const {data,setData}=useState();
   const {user,isAuthenticated}=useAuth0();
   useEffect(()=>{let FunctionToBeCalled=async ()=>{
     let id=user.email;

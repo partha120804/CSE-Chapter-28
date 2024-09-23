@@ -42,13 +42,13 @@ function Login() {
   useEffect(loadApi,[]);
   let HandleSubmit=(e)=>{
     e.preventDefault();
-    
+
   }
   return (
     <div>
     {loading?(<div>
       {img?<img src={img}/>:<img src={DefaultPfp}/>};
-      <form  action='https://cse-chapter-28-server.vercel.app/api/2027/profile'>
+      <form method='POST' action='https://cse-chapter-28-server.vercel.app/api/2027/profile'>
       <input type='file' name='img' onChange={ImageInput}></input>
       <br/>
       <br/>

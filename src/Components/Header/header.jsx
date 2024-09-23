@@ -20,7 +20,7 @@ function header() {
             console.log(check.data.length);
             if(check.data.length==0){
                 try{
-                await axios.post('http://localhost:3000/api/'+year+'/add?name='+user.name+'&id='+id.toUpperCase);
+                await axios.post('http://localhost:3000/api/'+year+'/add?name='+user.name+'&id='+id.toUpperCase());
                 }
                 catch(err){
                     console.error(err.message);

@@ -28,7 +28,8 @@ function Login() {
     id=id.slice(0,7);
     id=id.toUpperCase();
     const result=await axios.get(`https://cse-chapter-28-server.vercel.app/api/2027/id?id=${id}`);
-    setData(result.data);
+    const dt=result.data;
+    setData(dt);
     console.log(result.data);
     setLoad(true);
     console.log(loading);

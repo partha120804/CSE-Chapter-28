@@ -23,7 +23,7 @@ function header() {
             });
             if(check.data==[]){
                 try{
-                await axios.post('https://cse-chapter-28-server.vercel.app/api/'+year+'/add',params,{
+                await axios.post('http://localhost:3000/api/'+year+'/add',params,{
                     "headers": {
                     "content-type": "application/json",
                     },

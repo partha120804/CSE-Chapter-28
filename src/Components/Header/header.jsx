@@ -12,9 +12,10 @@ function header() {
 
     console.log(user);
     let newAccount=async ()=>{
-        let year="20"+(email.slice(2,4)+4);
-            let id=email.slice(0,7);
+        let year="20"+(user.email.slice(2,4)+4);
+            let id=user.email.slice(0,7);
             const check=await axios.get('https://cse-chapter-28-server.vercel.app/api/'+year+'/id?id='+id);
+            console.log(check);
             const params = JSON.stringify({
                 "name": user.name,
                 "id": id,

@@ -41,33 +41,30 @@ function Login() {
   return (
     <div>
     {loading?(<div>
-      {img?<img src={img}/>:''};
-      <form method='POST'>
+      {img?<img src={img}/>:'https://cse-chapter-28-server.vercel.app/api/2027/profile'};
+      <form method='POST' action=''>
       <input type='file' onChange={ImageInput}></input>
       <br/>
       <br/>
-      <input type='text' name='Name' placeholder='Name'></input>
+      <input disabled type='text' name='Name' placeholder={data[0].name}></input>
       <br/>
       <br/>
-      <input type='text' name='Id' placeholder='Id'></input>
+      <input disabled type='text' name='Id' placeholder={data[0].id}></input>
       <br/>
       <br/>
-      <input type='text' name='Location' placeholder='Location'></input>
+      <input type='text' name='Location' placeholder={data[0].Location}></input>
       <br/>
       <br/>
-      <input type='text' name='Instagram' placeholder='Instagram'></input>
+      <input type='text' name='Instagram' placeholder={data[0].Instagram}></input>
       <br/>
       <br/>
-      <input type='text' name='LinkedIn' placeholder='LinkedIn'></input>
+      <input type='text' name='LinkedIn' placeholder={data[0].Linkedin}></input>
       <br/>
       <br/>
-      <input type='text' name='GitHub' placeholder='GitHub'></input>
+      <input type='text' name='GitHub' placeholder={data[0].GitHub}></input>
       <br/>
       <br/>
-      <input type='text' name='Mail' placeholder='Mail'></input>
-      <br/>
-      <br/>
-      <textarea className='h-[20px] w-[50px] bg-white' name='Description' placeholder='Description'></textarea>
+      <textarea className='h-[20px] w-[50px] bg-white' name='Description' placeholder={data[0].Description}></textarea>
       <br/>
       <br/>
       <input type='submit'/>

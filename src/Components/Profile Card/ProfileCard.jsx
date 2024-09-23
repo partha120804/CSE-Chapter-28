@@ -37,7 +37,11 @@ function ProfileCard() {
   let [id, setId] = useState("");
   let [location, setLocation] = useState("");
   let [description, setDescription] = useState("");
-  let [disable, setDisable] = useState("");
+  let [Instagram, setInstagram] = useState("");
+  let [GitHub, setGitHub] = useState("");
+  let [LinkedIn, setLinkedIn] = useState("");
+  let [Fid, setFid] = useState("");
+  let [pfp,setPfp]=useState('');
   useEffect(datageter, []);
   const [pop, popState] = useState("hidden");
   let popup = (item) => {
@@ -46,6 +50,11 @@ function ProfileCard() {
       setId(item.id.slice(4));
       setLocation(item.Location);
       setDescription(item.Description);
+      setInstagram(item.Instagram);
+      setLinkedIn(item.LinkedIn);
+      setGitHub(item.GitHub);
+      setFid(item.id);
+      setPfp(item.Image);
     }
     popState("visible");
   };
@@ -71,7 +80,7 @@ function ProfileCard() {
               <div className="relative h-[75%]">
                 <img
                   className="h-[100%]  z-20 rounded-full border-[#002f26] border-8 "
-                  src={image}
+                  src={pfp?pfp:image}
                 />
                 <div className="h-[80px] w-[80px] z-20 rounded-full bg-[#002f26] absolute  right-0 bottom-0 flex justify-center items-center">
                   <p className="text-white text-3xl font-bold">{Number(id)}</p>
@@ -93,10 +102,10 @@ function ProfileCard() {
                
             </div>
             <div className="flex justify-around">
-                <FontAwesomeIcon className="size-7  ease-in-out hover:scale-[1.3] transform" icon={faInstagram} />
-                <FontAwesomeIcon className="size-7  ease-in-out hover:scale-[1.3] transform " icon={faGithub} />
-                <FontAwesomeIcon className="size-7  ease-in-out hover:scale-[1.3] transform" icon={faLinkedin} />
-                <FontAwesomeIcon className="size-7  ease-in-out hover:scale-[1.3] transform" icon={faEnvelope} />
+                {Instagram?<a href={Instagram}><FontAwesomeIcon className="size-7  ease-in-out hover:scale-[1.3] transform" icon={faInstagram} /></a>:''}
+                {GitHub?<a href={GitHub}><FontAwesomeIcon className="size-7  ease-in-out hover:scale-[1.3] transform " icon={faGithub} /></a>:''}
+                {LinkedIn?<a href={LinkedIn}><FontAwesomeIcon className="size-7  ease-in-out hover:scale-[1.3] transform" icon={faLinkedin} /></a>:''}
+                <a href={'https://mail.google.com/mail/?view=cm&to='+Fid+'@iiit-bh.ac.in'}><FontAwesomeIcon className="size-7  ease-in-out hover:scale-[1.3] transform" icon={faEnvelope} /></a>
             </div>
           </div>
         </div>
@@ -119,10 +128,10 @@ function ProfileCard() {
               </div>
               <div className="flex w-[210px] justify-around">
                 {/* <FontAwesomeIcon className="size-7" icon={faInstagram} /> */}
-                <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform" icon={faInstagram} />
-                <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform " icon={faGithub} />
-                <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform" icon={faLinkedin} />
-                <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform" icon={faEnvelope} />
+                {item.Instagram?<a href={item.Instagram}><FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform" icon={faInstagram} /></a>:''}
+                {item.GitHub?<a href={item.GitHub}><FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform " icon={faGithub} /></a>:''}
+                {item.LinkedIn?<a href={item.LinkedIn}> <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform" icon={faLinkedin} /></a>:''}
+                <a href={'https://mail.google.com/mail/?view=cm&to='+item.id+'@iiit-bh.ac.in'}><FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform" icon={faEnvelope} /></a>
               </div>
             </div>
           </div>

@@ -6,13 +6,36 @@ import { useAuth0 } from "@auth0/auth0-react";
 import "./header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faBars} from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
 function header() {
     const {user,loginWithRedirect,isAuthenticated,logout}=useAuth0();
+
+
+    let newAccount=async ()=>{
+        let year="20"+(email.slice(2,4)+4);
+            let id=email.slice(0,7);
+            const check=await axios.get('https://cse-chapter-28-server.vercel.app/api/'+year+'/id?id='+id);
+            const params = JSON.stringify({
+                "name": user.name,
+                "id": id,
+                });
+            if(check.data==[]){
+                await axios.post('https://cse-chapter-28-server.vercel.app/api/'+year+'/add',params,{
+                    "headers": {
+                    "content-type": "application/json",
+                    },
+                });
+            }
+
+    }
     if(isAuthenticated){
         const email=user.email;
         if(email.slice(0,2)!='b1'){
             alert("Email Invailid");
             logout();
+        }
+        else{
+            newAccount();
         }
     }
     let hamRef=useRef();

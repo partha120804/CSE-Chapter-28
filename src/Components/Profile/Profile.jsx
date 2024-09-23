@@ -39,12 +39,16 @@ function Login() {
   setLoad(false);
   FunctionToBeCalled();
 };
-  useEffect(loadApi,[])
+  useEffect(loadApi,[]);
+  let HandleSubmit=(e)=>{
+    e.preventDefault();
+    
+  }
   return (
     <div>
     {loading?(<div>
       {img?<img src={img}/>:<img src={DefaultPfp}/>};
-      <form method='POST' action='http://localhost:3000/api/2027/profile'>
+      <form  action='https://cse-chapter-28-server.vercel.app/api/2027/profile'>
       <input type='file' name='img' onChange={ImageInput}></input>
       <br/>
       <br/>
@@ -69,7 +73,7 @@ function Login() {
       <textarea className='h-[20px] w-[50px] bg-white' name='description' placeholder='Description' value={data[0].Description}></textarea>
       <br/>
       <br/>
-      <input type='submit'/>
+      <input onClick={HandleSubmit} type='submit'/>
       </form>
     </div>):(<DivOrigami/>)
   }

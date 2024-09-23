@@ -19,8 +19,8 @@ function Login() {
     const file=e.target.files[0];
     const image=await imagebase64(file);
     setImg(image);
-  }
-  const {data,setData}=useState([]);
+  };
+  const [data,setData]=useState([]);
   const {user,isAuthenticated}=useAuth0();
   let loadApi=()=>{
     let FunctionToBeCalled=async ()=>{

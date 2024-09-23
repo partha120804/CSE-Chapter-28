@@ -48,25 +48,25 @@ function Login() {
       <input type='file' onChange={ImageInput}></input>
       <br/>
       <br/>
-      <input disabled type='text' name='Name' placeholder={data[0].name}></input>
+      <input disabled type='text' name='Name' placeholder="Name" value={data[0].name}></input>
       <br/>
       <br/>
-      <input disabled type='text' name='Id' placeholder={data[0].id}></input>
+      <input disabled type='text' name='Id' placeholder="Id" value={data[0].id}></input>
       <br/>
       <br/>
-      <input type='text' name='Location' placeholder={data[0].Location}></input>
+      <input type='text' name='Location' placeholder="Location" value={data[0].Location}></input>
       <br/>
       <br/>
-      <input type='text' name='Instagram' placeholder={data[0].Instagram}></input>
+      <input type='text' name='Instagram' placeholder='Instagram' value={data[0].Instagram}></input>
       <br/>
       <br/>
-      <input type='text' name='LinkedIn' placeholder={data[0].Linkedin}></input>
+      <input type='text' name='LinkedIn' placeholder='LinkedIn' value={data[0].Linkedin}></input>
       <br/>
       <br/>
-      <input type='text' name='GitHub' placeholder={data[0].GitHub}></input>
+      <input type='text' name='GitHub' placeholder='GitHub' value={data[0].GitHub}></input>
       <br/>
       <br/>
-      <textarea className='h-[20px] w-[50px] bg-white' name='Description' placeholder={data[0].Description}></textarea>
+      <textarea className='h-[20px] w-[50px] bg-white' name='Description' placeholder='Description' value={data[0].Description}></textarea>
       <br/>
       <br/>
       <input type='submit'/>

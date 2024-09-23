@@ -5,7 +5,7 @@ import DivOrigami from '../LogoAnimation/LogoAnimation.jsx'
 import axios from 'axios';
 function Login() {
   const [img,setImg]=useState();
-
+  const [loading,setLoad]=useState(false);
   const imagebase64=(file)=>{
     const reader=new FileReader();
     reader.readAsDataURL(file);
@@ -22,19 +22,22 @@ function Login() {
   }
   const {data,setData}=useState();
   const {user,isAuthenticated}=useAuth0();
-  useEffect(()=>{let FunctionToBeCalled=async ()=>{
+  useEffect(()=>{
+    let FunctionToBeCalled=async ()=>{
     let id=user.email;
     id=id.slice(0,7);
     id=id.toUpperCase();
     const result=await axios.get(`https://cse-chapter-28-server.vercel.app/api/2027/id?id=${id}`);
     console.log(result.data);
     setData(result.data);
+    setLoad(true);
   }
+  setLoad(false);
   FunctionToBeCalled();
 },[])
   return (
     <div>
-    {data!=null?(<div>
+    {loading?(<div>
       {img?<img src={img}/>:''};
       <form method='POST'>
       <input type='file' onChange={ImageInput}></input>

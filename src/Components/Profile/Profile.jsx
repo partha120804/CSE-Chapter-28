@@ -5,7 +5,7 @@ import DivOrigami from '../LogoAnimation/LogoAnimation.jsx'
 import axios from 'axios';
 function Login() {
   const [img,setImg]=useState();
-  const [loading,setLoad]=useState(true);
+  const [loading,setLoad]=useState(false);
   const imagebase64=(file)=>{
     const reader=new FileReader();
     reader.readAsDataURL(file);

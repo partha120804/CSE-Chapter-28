@@ -18,7 +18,7 @@ function header() {
             const check=await axios.get('https://cse-chapter-28-server.vercel.app/api/'+year+'/id?id='+id);
             if(check.data.length==0){
                 try{
-                await axios.post('http://localhost:3000/api/'+year+'/add?name='+user.name+'&id='+id);
+                await axios.post('https://cse-chapter-28-server.vercel.app/api/'+year+'/add?name='+user.name+'&id='+id);
                 }
                 catch(err){
                     console.error(err.message);

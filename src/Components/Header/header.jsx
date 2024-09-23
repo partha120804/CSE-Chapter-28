@@ -14,13 +14,11 @@ function header() {
     let newAccount=async ()=>{
         let year="20"+((Number)(user.email.slice(2,4))+4);
         console.log(year);
-            let id=user.email.slice(0,7);
+            let id=user.email.slice(0,7).toUpperCase();
             const check=await axios.get('https://cse-chapter-28-server.vercel.app/api/'+year+'/id?id='+id);
-            console.log(check);
-            console.log(check.data.length);
             if(check.data.length==0){
                 try{
-                await axios.post('http://localhost:3000/api/'+year+'/add?name='+user.name+'&id='+id.toUpperCase());
+                await axios.post('http://localhost:3000/api/'+year+'/add?name='+user.name+'&id='+id);
                 }
                 catch(err){
                     console.error(err.message);

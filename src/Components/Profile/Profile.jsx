@@ -73,7 +73,7 @@ function Login() {
       <textarea className='h-[20px] w-[50px] bg-white' name='description' placeholder='Description' value={data[0].Description}></textarea>
       <br/>
       <br/>
-      <input onClick={HandleSubmit} type='submit'/>
+      <input  type='submit'/>
       </form>
     </div>):(<DivOrigami/>)
   }

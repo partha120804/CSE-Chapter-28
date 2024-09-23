@@ -47,7 +47,7 @@ function Login() {
   return (
     <div>
     {loading?(<div>
-      {img?<img src={img}/>:<img src={DefaultPfp}/>};
+      <img src={img?img:DefaultPfp}/>
       <form method='POST' action='https://cse-chapter-28-server.vercel.app/api/2027/profile'>
       <input type='file' name='img' onChange={ImageInput}></input>
       <br/>
@@ -64,7 +64,7 @@ function Login() {
       <input type='text' name='instagram' placeholder='Instagram' value={data[0].Instagram}></input>
       <br/>
       <br/>
-      <input type='text' name='linkedin' placeholder='LinkedIn' value={data[0].Linkedin}></input>
+      <input type='text' name='linkedin' placeholder='LinkedIn' value={data[0].LinkedIn}></input>
       <br/>
       <br/>
       <input type='text' name='github' placeholder='GitHub' value={data[0].GitHub}></input>

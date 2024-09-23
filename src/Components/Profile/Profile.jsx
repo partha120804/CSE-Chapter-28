@@ -48,10 +48,10 @@ function Login() {
       <input type='file' name='img' onChange={ImageInput}></input>
       <br/>
       <br/>
-      <input disabled type='text' name='name' placeholder="Name" value={data[0].name}></input>
+      <input readOnly type='text' name='name' placeholder="Name" value={data[0].name}></input>
       <br/>
       <br/>
-      <input disabled type='text' name='id' placeholder="Id" value={data[0].id}></input>
+      <input readOnly type='text' name='id' placeholder="Id" value={data[0].id}></input>
       <br/>
       <br/>
       <input type='text' name='location' placeholder="Location" value={data[0].Location}></input>

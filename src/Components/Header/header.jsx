@@ -111,8 +111,8 @@ function header() {
                                 </NavLink>
 
                             </li>:
-                            <li>
-                                <button onClick={(e)=>loginWithRedirect()}>LOGIN</button>
+                            <li >
+                                <button className="`block pr-4 pl-3 duration-200 lightcolor hover:bg-transparent border-0  lg:p-0" onClick={(e)=>loginWithRedirect()}>LOGIN</button>
                             </li>}
                             
                         </ul>

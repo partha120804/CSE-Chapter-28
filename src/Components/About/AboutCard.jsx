@@ -11,8 +11,8 @@ function AboutCard(props) {
   return (
     <div >
             <div
-             
-              className="pcard  h-[400px] w-[275px] backdrop-blur-md backdrop-brightness-[85%] hover:backdrop-brightness-[60%] transition-backdrop-brightness duration-500 border-2 rounded-xl border-[#E1E1E1] border-opacity-30 flex justify-around items-center flex-col text-[#002020] hover:text-[#ffffff]"
+              onClick={() => popup(item)}
+              className="pcard  h-[400px] w-[275px] backdrop-blur-md backdrop-brightness-[80%] hover:backdrop-brightness-[60%] border-2 rounded-xl border-[#E1E1E1] border-opacity-30 flex justify-around items-center flex-col text-[#d0f0ea] hover:text-[#ffffff] hover:scale-[1.05] transform transition duration-500 ease-in-out"
             >
               <div className="mt-3 rounded-full h-[195px] w-[195px]">
                 <img className="h-[195px] w-[195px] rounded-full" src={image} />
@@ -23,10 +23,11 @@ function AboutCard(props) {
                 <p className=" text-2xl">{props.work}</p>
               </div>
               <div className="flex w-[210px] justify-around">
-                <FontAwesomeIcon className="size-7" icon={faInstagram} />
-                <FontAwesomeIcon className="size-7" icon={faGithub} />
-                <FontAwesomeIcon className="size-7" icon={faLinkedin} />
-                <FontAwesomeIcon className="size-7" icon={faEnvelope} />
+                {/* <FontAwesomeIcon className="size-7" icon={faInstagram} /> */}
+                <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform" icon={faInstagram} />
+                <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform " icon={faGithub} />
+                <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform" icon={faLinkedin} />
+                <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform" icon={faEnvelope} />
               </div>
             </div>
             </div>

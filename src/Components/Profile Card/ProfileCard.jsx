@@ -70,38 +70,38 @@ function ProfileCard() {
 
   return (
     <div  className="flex flex-wrap gap-3 justify-center max-w-[100vw]">
-      <div onClick={popdown} ref={modelRef} className={` popup flex justify-center items-center inset-0 fixed z-10 backdrop-blur-sm  ${pop}` }>
+      <div onClick={popdown} ref={modelRef} className={` popup flex flex-col lg:flex-row justify-center items-center inset-0 fixed z-10 backdrop-blur-sm  ${pop}` }>
       <div
-        className={` bg-white bg-opacity-[20%] onClickPopUp w-[60%] h-[70%] backdrop-blur-[15px] border-4 border-opacity-30 rounded-xl border-[#E1E1E1] flex flex-row align-center items-center popup-content`}
+        className={` bg-white bg-opacity-[20%] onClickPopUp w-[90%] h-[85%] sm:w-[60%] lg:w-[60%] lg:h-[70%] backdrop-blur-[15px] border-4 border-opacity-30 rounded-xl border-[#E1E1E1] flex flex-col lg:flex-row items-center popup-content`}
       >
-        <div className="flex flex-col justify-center m-3  w-[40%] h-[95%]  my-8 popup-content">
+        <div className="flex flex-col justify-center m-3  lg:w-[40%] lg:h-[95%]  my-8 popup-content">
           <div className="flex justify-between flex-col items-center h-[80%] w-[100%]">
-            <div className=" h-[100%] ">
-              <div className="relative h-[75%]">
+            <div className=" lg:h-[100%] flex flex-col justify-center items-center">
+              <div className="relative sm:w-[50%] w-[70%] lg:w-[80%] rounded-full">
                 <img
-                  className="h-[100%]  z-20 rounded-full border-[#002f26] border-8 "
+                  className="w-[100%] z-20 rounded-full border-[#002f26] border-8 "
                   src={pfp?pfp:image}
                 />
                 <div className="h-[80px] w-[80px] z-20 rounded-full bg-[#002f26] absolute  right-0 bottom-0 flex justify-center items-center">
                   <p className="text-white text-3xl font-bold">{Number(id)}</p>
                 </div>
               </div>
-              <div className="my-4">
+              <div className="mt-4">
                 <p className="text-3xl text-center">{name}</p>
                 <p className="text-1xl text-center">{location}</p>
               </div>
             </div>
           </div>
         </div>
-        <div className="h-[80%] w-[0.3%] bg-[#002f26]"></div>
-        <div className="h-[95%] w-[59.7%] flex flex-col justify-center items-center">
-          <div className=" h-[80%] w-[90%]">
+        <div className="h-[80%] hidden lg:static w-[0.3%] bg-[#002f26]"></div>
+        <div className="lg:h-[95%] h-[100%] p-4 pt-0 lg:p-0 w-[95%] lg:w-[59.7%] flex flex-col justify-center items-center">
+          <div className=" lg:h-[80%] h-[95%] w-[95%] lg:w-[90%] flex flex-col items-center justify-center">
             <p className="text-3xl text-center font-bold">About Me</p>
-            <div className="flex justify-center items-center h-[85%]">
-              <textarea className="font-semibold text-2xl h-[80%] border-[15px] border-transparent w-[100%] bg-white bg-opacity-35 rounded-md resize-none placeholder-[#002f26] " disabled placeholder={description}  />
+            <div className="flex justify-center items-center h-[100%] lg:h-[85%] w-[95%] lg:w-[100%] ">
+              <textarea className="font-semibold text-2xl h-[90%] lg:h-[80%] border-[15px] border-transparent w-[100%] bg-white bg-opacity-35 rounded-md resize-none placeholder-[#002f26] " disabled placeholder={description}  />
                
             </div>
-            <div className="flex justify-around">
+            <div className="flex w-[80%] justify-around">
                 {Instagram?<a href={Instagram}><FontAwesomeIcon className="size-7  ease-in-out hover:scale-[1.3] transform" icon={faInstagram} /></a>:''}
                 {GitHub?<a href={GitHub}><FontAwesomeIcon className="size-7  ease-in-out hover:scale-[1.3] transform " icon={faGithub} /></a>:''}
                 {LinkedIn?<a href={LinkedIn}><FontAwesomeIcon className="size-7  ease-in-out hover:scale-[1.3] transform" icon={faLinkedin} /></a>:''}
@@ -120,10 +120,10 @@ function ProfileCard() {
               className="pcard  h-[400px] w-[275px] backdrop-blur-md backdrop-brightness-[80%] hover:backdrop-brightness-[60%] border-2 rounded-xl border-[#E1E1E1] border-opacity-30 flex justify-around items-center flex-col text-[#d0f0ea] hover:text-[#ffffff] hover:scale-[1.05] transform transition duration-500 ease-in-out"
             >
               <div className="mt-3 rounded-full h-[195px] w-[195px]">
-                <img className="h-[195px] w-[195px] rounded-full" src={image} />
+                <img className="h-[195px] w-[195px] rounded-full" src={item.image?item.image:image} />
               </div>
               <div className="flex items-center flex-col">
-                <p className=" text-3xl">{item.name}</p>
+                <p className=" text-3xl text-center">{item.name}</p>
                 <p className=" text-2xl">{item.id}</p>
               </div>
               <div className="flex w-[210px] justify-around">

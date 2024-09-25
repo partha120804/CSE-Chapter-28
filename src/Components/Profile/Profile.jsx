@@ -62,10 +62,8 @@ function Login() {
   useEffect(loadApi,[]);
   let SubmitCall=async (e)=>{
     e.preventDefault();
-    await axios({
-      method: 'post',
-      url: `http://localhost:3000/api/${year}/profile`,
-      params: {
+    await axios.post(`http://localhost:3000/api/${year}/profile`,
+      {
         id:data[0].id, // This is the body part
         location:Location,
         instagram:insta,
@@ -73,8 +71,12 @@ function Login() {
         description:Description,
         image:img,
         linkedin:LinkedIn
+      },{
+        headers:{
+          'Content-Type':'application/x-www-form-urlencoded'
+        }
       }
-    });
+    );
   }
 
   return (

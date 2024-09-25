@@ -64,7 +64,7 @@ function Login() {
     e.preventDefault();
     await axios({
       method: 'post',
-      url: `http://localhost:3000/api/{year}/profile`,
+      url: `http://localhost:3000/api/${year}/profile`,
       params: {
         id:data[0].id, // This is the body part
         location:Location,

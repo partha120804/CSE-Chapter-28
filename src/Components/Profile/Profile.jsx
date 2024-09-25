@@ -64,7 +64,7 @@ function Login() {
   let SubmitCall=async (e)=>{
     e.preventDefault();
     year="20"+((Number)(data[0].id.slice(2,4))+4);
-    await axios.post(`http://localhost:3000/api/${year}/profile`,
+    await axios.post(`https://cse-chapter-28-server.vercel.app/${year}/profile`,
       {
         id:data[0].id, // This is the body part
         location:Location,

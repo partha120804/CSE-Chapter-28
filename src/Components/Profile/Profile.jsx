@@ -23,14 +23,20 @@ function Login() {
     const image=await imagebase64(file);
     setImg(image);
   };
-  const [data,setData]=useState([]);
-  const {user,isAuthenticated}=useAuth0();
+  const [insta,SetInsta]=useState('');
+  const [Description,setDescription]=useState('');
+  const [LinkedIn,SetLinkedIn]=useState('');
+  const [GitHub,SetGitHub]=useState('');
+  const [Location,SetLocation]=useState('');
+  const [data, setData] = useState([]);
+  const { user, isAuthenticated } = useAuth0();
+  let year;
   let loadApi=()=>{
     let FunctionToBeCalled=async ()=>{
     let id=user.email;
     id=id.slice(0,7);
     id=id.toUpperCase();
-    let year="20"+((Number)(user.email.slice(2,4))+4);
+    year="20"+((Number)(user.email.slice(2,4))+4);
     const result=await axios.get(`https://cse-chapter-28-server.vercel.app/api/${year}/id?id=${id}`);
     const dt=result.data;
     setData(dt);
@@ -44,14 +50,27 @@ function Login() {
   FunctionToBeCalled();
 };
   useEffect(loadApi,[]);
-  let HandleSubmit=(e)=>{
+  let SubmitCall=async (e)=>{
     e.preventDefault();
-
+    await axios({
+      method: 'post',
+      url: `http://localhost:3000/api/{year}/profile`,
+      params: {
+        id:data[0].id, // This is the body part
+        location:Location,
+        instagram:insta,
+        github:GitHub,
+        description:Description,
+        image:img,
+        linkedin:LinkedIn
+      }
+    });
   }
+
   return (
     <div >
       {loading ? (<div className='md:text-xl lg:text-2xl lg:mt-8'>
-        <form method='POST' action='https://cse-chapter-28-server.vercel.app/api/2027/profile'>
+        <form onSubmit={SubmitCall}>
 
           <div className='flex justify-center h-[100%] w-[100%] mx-auto
         lg:flex-row flex-col items-center lg:px-[10%]'>
@@ -93,7 +112,8 @@ function Login() {
                   src="https://img.icons8.com/material-sharp/48/marker.png" alt="marker" />
                 <input
                   className='w-[75%] lg:w-[90%] mr-10 bg-white bg-opacity-20 backdrop-blur-sm p-2 pl-3  rounded-lg max-w-[86%]  placeholder-black'
-                  type='text' name='location' placeholder={(data[0].Location)?data[0].Location:'Location'}>
+                  type='text' name='location' value={Location} placeholder='Location'
+                  onChange={(event)=>SetLocation(event.target.value)}>
                 </input>
               </div>
             </div>
@@ -105,7 +125,8 @@ function Login() {
               <textarea
                 className=' w-[100%] bg-white h-[30%] bg-opacity-20 xl:max-w-3xl backdrop-blur-sm pt-3 
                  mt-6 rounded-lg max-w-2xl  placeholder-black resize-none p-4' rows='4'
-                name='description' placeholder={data[0].Description?data[0].Description:'Description'}>
+                name='description' value={Description} placeholder='Description'
+                onChange={(event)=>setDescription(event.target.value)}>
               </textarea>
               <br />
               <br />
@@ -116,7 +137,8 @@ function Login() {
                   src="https://img.icons8.com/glyph-neue/64/instagram-new--v1.png" alt="instagram-new--v1" />
                 <input
                   className='w-[89.25%]  bg-white bg-opacity-20 backdrop-blur-sm p-2 pl-3  rounded-lg  placeholder-black'
-                  type='text' name='instagram' placeholder={(data[0].Instagram)?data[0].Instagram:'Instagram'}></input>
+                  type='text' name='instagram' value={insta} placeholder='Instagram'
+                  onChange={(event)=>SetInsta(event.target.value)}></input>
               </div>
 
               <div className='w-[100%] flex mt-5'>
@@ -125,7 +147,8 @@ function Login() {
                   src="https://img.icons8.com/ios-filled/50/linkedin.png" alt="linkedin" />
                 <input
                   className='w-[89.25%] bg-white bg-opacity-20 backdrop-blur-sm p-2 pl-3  rounded-lg placeholder-black'
-                  type='text' name='linkedin' placeholder={(data[0].LinkedIn)?data[0].LinkedIn:'LinkedIn'}></input>
+                  type='text' name='linkedin' value={LinkedIn} placeholder='LinkedIn'
+                  onChange={(event)=>SetLinkedIn(event.target.value)}></input>
               </div>
 
               <div className='w-[100%] flex mt-5'>
@@ -134,7 +157,8 @@ function Login() {
                   src="https://img.icons8.com/glyph-neue/64/github.png" alt="github" />
                 <input
                   className='w-[89.25%] bg-white bg-opacity-20 backdrop-blur-sm p-2 pl-3  rounded-lg  placeholder-black'
-                  type='text' name='github' placeholder={(data[0].GitHub)?data[0].GitHub:'GitHub'}></input>
+                  type='text' name='github' value={GitHub} placeholder='GitHub'
+                  onChange={(event)=>SetGitHub(event.target.value)}></input>
               </div>
               <br />
               <br />

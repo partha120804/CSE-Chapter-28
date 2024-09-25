@@ -33,10 +33,11 @@ function Login() {
   let year;
   let loadApi=()=>{
     let FunctionToBeCalled=async ()=>{
-    let id=user.email;
+    let id;
+    id=user.email;
     id=id.slice(0,7);
     id=id.toUpperCase();
-    year="20"+((Number)(user.email.slice(2,4))+4);
+    year="20"+((Number)(id.slice(2,4))+4);
     const result=await axios.get(`https://cse-chapter-28-server.vercel.app/api/${year}/id?id=${id}`);
     const dt=result.data;
     setData(dt);
@@ -62,6 +63,7 @@ function Login() {
   useEffect(loadApi,[]);
   let SubmitCall=async (e)=>{
     e.preventDefault();
+    year=data[i].id.slice(2,4);
     await axios.post(`http://localhost:3000/api/${year}/profile`,
       {
         id:data[0].id, // This is the body part

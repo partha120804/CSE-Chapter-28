@@ -63,7 +63,7 @@ function Login() {
   useEffect(loadApi,[]);
   let SubmitCall=async (e)=>{
     e.preventDefault();
-    year=data[i].id.slice(2,4);
+    year=data[0].id.slice(2,4);
     await axios.post(`http://localhost:3000/api/${year}/profile`,
       {
         id:data[0].id, // This is the body part

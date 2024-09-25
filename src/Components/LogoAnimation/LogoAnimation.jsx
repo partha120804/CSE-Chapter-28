@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { SiAmazon, SiGithub, SiGoogle, SiMeta, SiTwitch } from "react-icons/si";
+import { SiReact, SiJavascript, SiHtml5, SiCss3, SiGithub, SiTailwindcss, SiNodedotjs, SiVercel, SiMongodb, SiFigma  } from "react-icons/si";
 import { twMerge } from "tailwind-merge";
 
 const DivOrigami = () => {
@@ -8,20 +8,32 @@ const DivOrigami = () => {
     <section className="flex h-72 flex-col items-center justify-center gap-12 px-4 py-24 md:flex-row">
       <LogoRolodex
         items={[
-          <LogoItem key={1} className="bg-orange-300 text-neutral-900">
-            <SiAmazon />
+          <LogoItem key={1} className="bg-[#d0f0ea] text-[#002f26]">
+            <SiGithub/>
           </LogoItem>,
-          <LogoItem key={2} className="bg-green-300 text-neutral-900">
-            <SiGoogle />
+          <LogoItem key={2} className="text-[#d0f0ea] bg-[#002f26]">
+            <SiFigma/>
           </LogoItem>,
-          <LogoItem key={3} className="bg-blue-300 text-neutral-900">
-            <SiMeta />
+          <LogoItem key={3} className="bg-[#d0f0ea] text-[#002f26]">
+            <SiHtml5 />
           </LogoItem>,
-          <LogoItem key={4} className="bg-white text-black">
-            <SiGithub />
+          <LogoItem key={4} className="text-[#d0f0ea] bg-[#002f26]">
+            <SiJavascript />
           </LogoItem>,
-          <LogoItem key={5} className="bg-purple-300 text-neutral-900">
-            <SiTwitch />
+          <LogoItem key={5} className="bg-[#d0f0ea] text-[#002f26]">
+            <SiCss3 />
+          </LogoItem>,
+          <LogoItem key={6} className="text-[#d0f0ea] bg-[#002f26]">
+            <SiTailwindcss />
+          </LogoItem>,
+          <LogoItem key={7} className="bg-[#d0f0ea] text-[#002f26]">
+            <SiReact />
+          </LogoItem>,
+          <LogoItem key={8} className="text-[#d0f0ea] bg-[#002f26]">
+            <SiNodedotjs />
+          </LogoItem>,
+          <LogoItem key={9} className="bg-[#d0f0ea] text-[#002f26]">
+            <SiMongodb />
           </LogoItem>,
         ]}
       />
@@ -29,7 +41,7 @@ const DivOrigami = () => {
   );
 };
 
-const DELAY_IN_MS = 700;
+const DELAY_IN_MS = 1200;
 const TRANSITION_DURATION_IN_SECS = 0.3;
 
 const LogoRolodex = ({ items }) => {

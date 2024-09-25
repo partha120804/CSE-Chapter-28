@@ -6,7 +6,13 @@ import { SiGithub, SiTiktok, SiYoutube } from "react-icons/si";
 import { TiSocialTwitter } from "react-icons/ti";
 import image from '../../../assets/Nature.jpg';
 import Default from '../../../assets/default.jpg'
+import { useLocation } from 'react-router-dom';
+
 export const RevealBentoR = () => {
+  const location = useLocation();
+  const smalpics = location.state && location.state.smalpics;
+
+  console.log(smalpics);
   return (
     <div className="min-h-screen px-4 py-12 text-zinc-50">
       <motion.div
@@ -63,7 +69,9 @@ const HeaderBlock = () => (
   </Block>
 );
 
-const SocialsBlock = () => (
+const SocialsBlock = () =>{
+
+  return (
   <>
     <Block
       whileHover={{
@@ -76,7 +84,8 @@ const SocialsBlock = () => (
         href="#"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <img src={Default}/>
+        <img src={Default} />
+    
       </a>
     </Block>
     <Block
@@ -123,4 +132,5 @@ const SocialsBlock = () => (
     </Block>
   </>
 );
+}
 

@@ -7,6 +7,7 @@ import Gallery from "./Components/Gallery/Gallery.jsx";
 import Batches from "./Components/Batches/Batches.jsx";
 import Profile from "./Components/Profile/Profile.jsx";
 import About from "./Components/About/About.jsx";
+import { RevealBentoR } from "./Components/GalleryCard/Grid/GridRight.jsx";
 import {
   RouterProvider,
   createBrowserRouter,
@@ -18,10 +19,14 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home />} />
-      <Route path="Gallery" element={<Gallery />} />
+
+      <Route path="Gallery" element={<Gallery />}/>
+      <Route path="/Gallery/image" element={<RevealBentoR/>}/>
+
       <Route path="Batches" element={<Batches />} />
       <Route path="About" element={<About />} />
       <Route path="Profile" element=  {<Profile />} />
+
     </Route>
   )
 );

@@ -8,9 +8,10 @@ import Event from './Event/Event';
 function Gallery() {
   let slides=[image,Default,Default,Default,Default];
   return (
-    <div className='flex justify-center'>
+    <div className='flex justify-center flex-col'>
       
       <Event/>
+      
     </div>
   )
 }

@@ -44,7 +44,17 @@ function Login() {
     setLoad(true);
     console.log(loading);
     if(dt[0].image)
-      setImg(dt[0].image);
+    setImg(dt[0].image);
+    if(dt[0].Instagram)
+      SetInsta(dt[0].Instagram);
+    if(dt[0].GitHub)
+      SetGitHub(dt[0].GitHub);
+    if(dt[0].LinkedIn)
+      SetLinkedIn(dt[0].LinkedIn);
+    if(dt[0].Description)
+      setDescription(dt[0].Description);
+    if(dt[0].Location)
+      SetLocation(dt[0].Location);
   }
   setLoad(false);
   FunctionToBeCalled();

@@ -15,7 +15,7 @@ import axios from "axios";
 
  
 
-function ProfileCard() {
+function ProfileCard({year}) {
   const [data, setData] = useState([]);
   const [load, LoadState] = useState(false);
   let datageter = () => {
@@ -23,7 +23,7 @@ function ProfileCard() {
     let ApiCaller = async () => {
       LoadState(false);
       response = await axios.get(
-        "https://cse-chapter-28-server.vercel.app/api/2027"
+        "https://cse-chapter-28-server.vercel.app/api/"+year
       );
       setData(response.data);
       console.log(response.data);
@@ -42,7 +42,7 @@ function ProfileCard() {
   let [LinkedIn, setLinkedIn] = useState("");
   let [Fid, setFid] = useState("");
   let [pfp,setPfp]=useState('');
-  useEffect(datageter, []);
+  useEffect(datageter,[year]);
   const [pop, popState] = useState("hidden");
   let popup = (item) => {
     if (item != {}) {
@@ -79,7 +79,7 @@ function ProfileCard() {
             <div className=" lg:h-[100%] flex flex-col justify-center items-center">
               <div className="relative sm:w-[50%] w-[70%] lg:w-[80%] rounded-full">
                 <img
-                  className="w-[100%] z-20 rounded-full border-[#002f26] border-8 "
+                  className="size-[100%] z-20 aspect-square rounded-full border-[#002f26] border-8 "
                   src={pfp?pfp:image}
                 />
                 <div className="h-[80px] w-[80px] z-20 rounded-full bg-[#002f26] absolute  right-0 bottom-0 flex justify-center items-center">

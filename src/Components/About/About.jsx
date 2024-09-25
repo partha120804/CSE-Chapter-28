@@ -1,5 +1,5 @@
 import React from 'react'
-import "./about.css"
+import  "./about.css"
 import AboutCard from './AboutCard'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import mongoicon from "../../assets/logo/mongo.png"

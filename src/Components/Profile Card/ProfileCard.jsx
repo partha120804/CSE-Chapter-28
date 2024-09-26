@@ -3,7 +3,6 @@ import { useState, useRef } from "react";
 import image from "../../assets/default.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './Profile.css';
-import close from '../../assets/close.svg';
 import DivOrigami from '../LogoAnimation/LogoAnimation.jsx'
 import {
   faInstagram,
@@ -128,10 +127,12 @@ function ProfileCard({year}) {
               </div>
               <div className="flex w-[210px] justify-around">
                 {/* <FontAwesomeIcon className="size-7" icon={faInstagram} /> */}
-                {item.Instagram?<a href={item.Instagram}><FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform" icon={faInstagram} /></a>:''}
-                {item.GitHub?<a href={item.GitHub}><FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform " icon={faGithub} /></a>:''}
-                {item.LinkedIn?<a href={item.LinkedIn}> <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform" icon={faLinkedin} /></a>:''}
-                <a href={'https://mail.google.com/mail/?view=cm&to='+item.id+'@iiit-bh.ac.in'}><FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform" icon={faEnvelope} /></a>
+                {item.Instagram?<a href={item.Instagram}><FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform" icon={faInstagram} /></a>:''}
+                {item.GitHub?<a href={item.GitHub}><FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform " icon={faGithub} /></a>:''}
+                {item.LinkedIn?<a href={item.LinkedIn}> <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform" icon={faLinkedin} /></a>:''}
+                <a href={'https://mail.google.com/mail/?view=cm&to='+item.id+'@iiit-bh.ac.in'}>
+                  <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform" icon={faEnvelope} />
+                </a>
               </div>
             </div>
           </div>

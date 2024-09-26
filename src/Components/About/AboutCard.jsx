@@ -24,10 +24,10 @@ function AboutCard(props) {
               </div>
               <div className="flex w-[210px] justify-around">
                 {/* <FontAwesomeIcon className="size-7" icon={faInstagram} /> */}
-                <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform" icon={faInstagram} />
-                <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform " icon={faGithub} />
-                <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform" icon={faLinkedin} />
-                <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform" icon={faEnvelope} />
+                <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform" icon={faInstagram} />
+                <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform " icon={faGithub} />
+                <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform" icon={faLinkedin} />
+                <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform" icon={faEnvelope} />
               </div>
             </div>
             </div>

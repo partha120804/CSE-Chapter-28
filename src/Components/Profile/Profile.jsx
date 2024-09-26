@@ -106,7 +106,7 @@ function Login() {
               <img
                     className='lg:w-[300px] aspect-square lg:h-[300px] border-8 border-[#002f26] md:w-[250px] md:h-[250px]
                     w-[225px] h-[225px] 
-                    rounded-full object-fill mx-auto hover:opacity-80 cursor-pointer object-cover'
+                    rounded-full mx-auto hover:opacity-80 cursor-pointer object-cover'
                     
                     src={img ? img : DefaultPfp}
                 />
@@ -118,7 +118,8 @@ function Login() {
                   className='[4.5rem] w-[4.5rem] rounded-full bg-transparent opacity-0'
                   id='upload'
                   hidden
-                  type='file' onChange={ImageInput}>
+                  type='file' onChange={ImageInput}
+                  accept="image/*" >
                 </input>
                 </div>
               </div>

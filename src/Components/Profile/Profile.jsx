@@ -5,7 +5,7 @@ import DefaultPfp from '../../assets/default.jpg'
 import DivOrigami from '../LogoAnimation/LogoAnimation.jsx'
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faPen} from '@fortawesome/free-solid-svg-icons'
+import {faPen,faCircleCheck} from '@fortawesome/free-solid-svg-icons'
 function Login() {
   const [img,setImg]=useState();
   const [loading,setLoad]=useState(false);
@@ -29,6 +29,7 @@ function Login() {
   const [GitHub,SetGitHub]=useState('');
   const [Location,SetLocation]=useState('');
   const [data, setData] = useState([]);
+  const[submit,setSubmit]=useState('invisible');
   const { user, isAuthenticated } = useAuth0();
   let year;
   let loadApi=()=>{
@@ -37,6 +38,7 @@ function Login() {
     id=user.email;
     id=id.slice(0,7);
     id=id.toUpperCase();
+    //id="B123067"
     year="20"+((Number)(id.slice(2,4))+4);
     const result=await axios.get(`https://cse-chapter-28-server.vercel.app/api/${year}/id?id=${id}`);
     const dt=result.data;
@@ -61,6 +63,14 @@ function Login() {
   FunctionToBeCalled();
 };
   useEffect(loadApi,[]);
+  function timeout(delay) {
+    return new Promise( res => setTimeout(res, delay) );
+  }
+  let submitChk=async ()=>{
+    setSubmit('visible');
+    await timeout(1000);
+    setSubmit('invisible');
+  }
   let SubmitCall=async (e)=>{
     e.preventDefault();
     year="20"+((Number)(data[0].id.slice(2,4))+4);
@@ -79,6 +89,7 @@ function Login() {
         }
       }
     );
+    submitChk();
   }
 
   return (
@@ -95,7 +106,7 @@ function Login() {
               <img
                     className='lg:w-[300px] aspect-square lg:h-[300px] border-8 border-[#002f26] md:w-[250px] md:h-[250px]
                     w-[225px] h-[225px] 
-                    rounded-full object-fill mx-auto hover:opacity-80 cursor-pointer'
+                    rounded-full object-fill mx-auto hover:opacity-80 cursor-pointer object-cover'
                     
                     src={img ? img : DefaultPfp}
                 />
@@ -194,6 +205,7 @@ function Login() {
                 className='hidden'
                 type='submit' />
             </button>
+            <FontAwesomeIcon className={`ml-4 ${submit}`} icon={faCircleCheck} style={{color: "#009e28",}} />
           </div>
         </form>
         <br />

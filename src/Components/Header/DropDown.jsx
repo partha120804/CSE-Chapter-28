@@ -12,12 +12,12 @@ export default function Example() {
 
       <MenuItems
         transition
-        className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+        className="absolute right-0 z-10 mt-3 w-[8rem] origin-top-right rounded-md bg-[#d1fffa] bg-opacity-80 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in text-right"
       >
         <div className="py-1">
           <MenuItem>
             <a
-              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+              className="block px-4 py-2 text-3xl text-[#0e4a3f] data-[focus]:bg-[#d1fffa80] data-[focus]:text-[#081513]"
             >
               <NavLink
                   to="/Batches:2026"
@@ -29,7 +29,7 @@ export default function Example() {
           </MenuItem>
           <MenuItem>
             <a
-              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+              className="block px-4 py-2 text-3xl text-[#0e4a3f] data-[focus]:bg-[#d1fffa80] data-[focus]:text-[#081513]"
             >
                 <NavLink
                   to="/Batches:2027"
@@ -42,7 +42,7 @@ export default function Example() {
           </MenuItem>
           <MenuItem>
             <a
-              className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
+              className="block px-4 py-2 text-3xl text-[#0e4a3f] data-[focus]:bg-[#d1fffa80] data-[focus]:text-[#081513]"
             >
               <NavLink
                   to="/Batches:2028"

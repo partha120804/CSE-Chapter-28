@@ -123,4 +123,3 @@ const SocialsBlock = () => (
     </Block>
   </>
 );
-

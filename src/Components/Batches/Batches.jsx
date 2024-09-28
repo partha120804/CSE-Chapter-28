@@ -1,10 +1,10 @@
 import React from 'react'
 import ProfileCard from '../Profile Card/ProfileCard';
-function Batches() {
-  
+function Batches({year}) {
+  console.log(year);
   return (
     <div className="flex flex-wrap justify-center">
-      <ProfileCard/>
+      <ProfileCard year={year}/>
     </div>
   );
 }

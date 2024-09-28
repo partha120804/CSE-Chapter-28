@@ -9,10 +9,8 @@ import Default from '../../../assets/default.jpg'
 import { useLocation } from 'react-router-dom';
 
 export const RevealBentoR = () => {
-  const location = useLocation();
-  const smalpics = location.state && location.state.smalpics;
-
-  console.log(smalpics);
+ 
+  
   return (
     <div className="min-h-screen px-4 py-12 text-zinc-50">
       <motion.div
@@ -60,17 +58,24 @@ const Block = ({ className, ...rest }) => {
   );
 };
 
-const HeaderBlock = () => (
+const HeaderBlock = () => {
+  const location = useLocation();
+  const smalpics = location.state && location.state.smalpics;
+  return(
+  
   <Block className="col-span-12  row-span-2 md:col-span-6">
     <h1 className="mb-2 border-white ">
-      <img src={image}></img>
+      <img className=" object-cover" src={smalpics.pic1}></img>
     </h1>
     <p className="text-black text-center text-3xl">#FRESHER 2023</p>
   </Block>
 );
+}
 
 const SocialsBlock = () =>{
-
+  const location = useLocation();
+  const smalpics = location.state && location.state.smalpics;
+ 
   return (
   <>
     <Block
@@ -84,7 +89,7 @@ const SocialsBlock = () =>{
         href="#"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <img src={Default} />
+        <img className="aspect-square object-cover" src={smalpics.pic2} />
     
       </a>
     </Block>
@@ -99,7 +104,7 @@ const SocialsBlock = () =>{
         href="#"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <img src={Default}/>
+        <img className="aspect-square object-cover" src={smalpics.pic3}/>
       </a>
     </Block>
     <Block
@@ -113,7 +118,7 @@ const SocialsBlock = () =>{
         href="#"
         className="grid h-full place-content-center text-3xl text-black"
       >
-        <img src={Default}/>
+        <img className="aspect-square object-cover" src={smalpics.pic4}/>
       </a>
     </Block>
     <Block
@@ -127,7 +132,7 @@ const SocialsBlock = () =>{
         href="#"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <img src={Default}/>
+        <img className="aspect-square object-cover" src={smalpics.pic5}/>
       </a>
     </Block>
   </>

@@ -3,7 +3,6 @@ import { useState, useRef } from "react";
 import image from "../../assets/default.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './Profile.css';
-import close from '../../assets/close.svg';
 import DivOrigami from '../LogoAnimation/LogoAnimation.jsx'
 import {
   faInstagram,
@@ -79,7 +78,7 @@ function ProfileCard({year}) {
             <div className=" lg:h-[100%] flex flex-col justify-center items-center">
               <div className="relative sm:w-[50%] w-[70%] lg:w-[80%] rounded-full">
                 <img
-                  className="size-[100%] z-20 aspect-square rounded-full border-[#002f26] border-8 "
+                  className="size-[100%] z-20 aspect-square rounded-full border-[#002f26] border-8 object-cover"
                   src={pfp?pfp:image}
                 />
                 <div className="h-[80px] w-[80px] z-20 rounded-full bg-[#002f26] absolute  right-0 bottom-0 flex justify-center items-center">
@@ -120,7 +119,7 @@ function ProfileCard({year}) {
               className="pcard  h-[400px] w-[275px] backdrop-blur-md backdrop-brightness-[80%] hover:backdrop-brightness-[60%] border-2 rounded-xl border-[#E1E1E1] border-opacity-30 flex justify-around items-center flex-col text-[#d0f0ea] hover:text-[#ffffff] hover:scale-[1.05] transform transition duration-500 ease-in-out"
             >
               <div className="mt-3 rounded-full h-[195px] w-[195px]">
-                <img className="h-[195px] w-[195px] rounded-full" src={item.image?item.image:image} />
+                <img className="h-[195px] w-[195px] object-cover rounded-full" src={item.image?item.image:image} />
               </div>
               <div className="flex items-center flex-col">
                 <p className=" text-3xl text-center">{item.name}</p>
@@ -128,10 +127,12 @@ function ProfileCard({year}) {
               </div>
               <div className="flex w-[210px] justify-around">
                 {/* <FontAwesomeIcon className="size-7" icon={faInstagram} /> */}
-                {item.Instagram?<a href={item.Instagram}><FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform" icon={faInstagram} /></a>:''}
-                {item.GitHub?<a href={item.GitHub}><FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform " icon={faGithub} /></a>:''}
-                {item.LinkedIn?<a href={item.LinkedIn}> <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform" icon={faLinkedin} /></a>:''}
-                <a href={'https://mail.google.com/mail/?view=cm&to='+item.id+'@iiit-bh.ac.in'}><FontAwesomeIcon className="size-7 hover:text-[#ccfff0] hover:duration-500 ease-in-out hover:scale-[1.2] transform" icon={faEnvelope} /></a>
+                {item.Instagram?<a href={item.Instagram}><FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform" icon={faInstagram} /></a>:''}
+                {item.GitHub?<a href={item.GitHub}><FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform " icon={faGithub} /></a>:''}
+                {item.LinkedIn?<a href={item.LinkedIn}> <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform" icon={faLinkedin} /></a>:''}
+                <a href={'https://mail.google.com/mail/?view=cm&to='+item.id+'@iiit-bh.ac.in'}>
+                  <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform" icon={faEnvelope} />
+                </a>
               </div>
             </div>
           </div>

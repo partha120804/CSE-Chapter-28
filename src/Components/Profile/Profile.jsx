@@ -5,7 +5,12 @@ import DefaultPfp from '../../assets/default.jpg'
 import DivOrigami from '../LogoAnimation/LogoAnimation.jsx'
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faPen} from '@fortawesome/free-solid-svg-icons'
+import {faCircleCheck, faMapMarkerAlt, faCamera, } from '@fortawesome/free-solid-svg-icons';
+import {
+  faInstagram,
+  faGithub,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 function Login() {
   const [img,setImg]=useState();
   const [loading,setLoad]=useState(false);
@@ -29,6 +34,7 @@ function Login() {
   const [GitHub,SetGitHub]=useState('');
   const [Location,SetLocation]=useState('');
   const [data, setData] = useState([]);
+  const[submit,setSubmit]=useState('invisible');
   const { user, isAuthenticated } = useAuth0();
   let year;
   let loadApi=()=>{
@@ -37,6 +43,7 @@ function Login() {
     id=user.email;
     id=id.slice(0,7);
     id=id.toUpperCase();
+    // id="B123067"
     year="20"+((Number)(id.slice(2,4))+4);
     const result=await axios.get(`https://cse-chapter-28-server.vercel.app/api/${year}/id?id=${id}`);
     const dt=result.data;
@@ -61,10 +68,18 @@ function Login() {
   FunctionToBeCalled();
 };
   useEffect(loadApi,[]);
+  function timeout(delay) {
+    return new Promise( res => setTimeout(res, delay) );
+  }
+  let submitChk=async ()=>{
+    setSubmit('visible');
+    await timeout(2500);
+    setSubmit('invisible');
+  }
   let SubmitCall=async (e)=>{
     e.preventDefault();
     year="20"+((Number)(data[0].id.slice(2,4))+4);
-    await axios.post(`https://cse-chapter-28-server.vercel.app/${year}/profile`,
+    await axios.post(`https://cse-chapter-28-server.vercel.app/api/${year}/profile`,
       {
         id:data[0].id, // This is the body part
         location:Location,
@@ -79,6 +94,7 @@ function Login() {
         }
       }
     );
+    submitChk();
   }
 
   return (
@@ -95,37 +111,34 @@ function Login() {
               <img
                     className='lg:w-[300px] aspect-square lg:h-[300px] border-8 border-[#002f26] md:w-[250px] md:h-[250px]
                     w-[225px] h-[225px] 
-                    rounded-full object-fill mx-auto hover:opacity-80 cursor-pointer'
+                    rounded-full mx-auto hover:brightness-90 cursor-pointer object-cover'
                     
                     src={img ? img : DefaultPfp}
                 />
                 <div className='bg-[#002f26] rounded-full h-[4.5rem] w-[4.5rem] absolute right-0 bottom-0'>
                 <label htmlFor='upload' className='h-[4.5rem] w-[4.5rem] rounded-full flex items-center justify-center'>
-                <FontAwesomeIcon icon={faPen} className='h-[1.5rem] w-[1.5rem]' style={{color: "#ffffff",}} />
+                <FontAwesomeIcon icon={faCamera} className='h-[1.75rem] w-[1.75rem] text-[#cffaf1] hover:text-[#fff] transition ease-in-out duration-150 transform' />
                 </label>
                 <input
                   className='[4.5rem] w-[4.5rem] rounded-full bg-transparent opacity-0'
                   id='upload'
                   hidden
-                  type='file' onChange={ImageInput}>
+                  type='file' onChange={ImageInput}
+                  accept="image/*" >
                 </input>
                 </div>
               </div>
 
-              <input
-                className='w-[90%] lg:mx-auto md:ml-20 bg-white bg-opacity-0 p-2 mt-6 rounded-lg font-extrabold text-center text-white text-3xl uppercase'
-                readOnly type='text' name='name' placeholder="Name" value={data[0].name}></input>
+              <div className='w-[90%] lg:mx-auto md:ml-20 bg-white bg-opacity-0 p-2 mt-6 rounded-lg font-extrabold text-center text-white text-3xl uppercase'>
+                {data[0].name}
+              </div>
 
-              <input
-                className='w-[100%] bg-white bg-opacity-0 p-2  rounded-lg font-extrabold text-center text-white'
-                readOnly hidden type='text' name='id' placeholder="Id" value={data[0].id}></input>
+              <input className='w-[100%] bg-white bg-opacity-0 p-2 rounded-lg font-extrabold text-center text-white' readOnly hidden type='text' name='id' placeholder="Id" value={data[0].id}></input>
 
               <div className=' w-[90%] flex justify-center '>
-                <img
-                  className='inline w-10 h-10 mr-3'
-                  src="https://img.icons8.com/material-sharp/48/marker.png" alt="marker" />
+              <FontAwesomeIcon icon={faMapMarkerAlt} className='inline mx-4 ml-1 my-2 size-9 text-[#b2d7d0]' />
                 <input
-                  className='w-[75%] lg:w-[90%] mr-10 bg-white bg-opacity-20 backdrop-blur-sm p-2 pl-3  rounded-lg max-w-[86%]  placeholder-black'
+                  className='w-[75%] lg:w-[90%] mr-10 bg-white bg-opacity-20 backdrop-blur-sm p-2 pl-3 text-[#eafdf9] rounded-lg max-w-[86%] outline-none placeholder-[#fffa] outline-offset-0 focus:outline-[#d2fff7a0]'
                   type='text' name='location' value={Location} placeholder='Location'
                   onChange={(event)=>SetLocation(event.target.value)}>
                 </input>
@@ -135,10 +148,9 @@ function Login() {
             <div className=' sm:w-[50%] w-[80%] h-[70%]'>
 
               <br />
-              <h1 className=' font-extrabold  text-4xl text-center'>About me</h1>
+              <h1 className=' font-extrabold mt-4 text-4xl text-center text-[#e0fcf6]'>About me</h1>
               <textarea
-                className=' w-[100%] bg-white h-[30%] bg-opacity-20 xl:max-w-3xl backdrop-blur-sm pt-3 
-                 mt-6 rounded-lg max-w-2xl  placeholder-black resize-none p-4' rows='4'
+                className=' w-[100%] bg-white h-[30%] bg-opacity-20 xl:max-w-3xl backdrop-blur-sm pt-3 mt-6 rounded-lg max-w-2xl text-[#fff] placeholder-[#fffa] outline-offset-0 outline-[#d2fff7] resize-none p-4' rows='4'
                 name='description' value={Description} placeholder='Description'
                 onChange={(event)=>setDescription(event.target.value)}>
               </textarea>
@@ -146,31 +158,25 @@ function Login() {
               <br />
 
               <div className='w-[100%] flex mt-5'>
-                <img 
-                  className='inline mx-4 size-12 '
-                  src="https://img.icons8.com/glyph-neue/64/instagram-new--v1.png" alt="instagram-new--v1" />
+              <FontAwesomeIcon className='inline mx-4 ml-1 my-1 size-10 text-[#b2d7d0]' icon={faInstagram} />
                 <input
-                  className='w-[89.25%]  bg-white bg-opacity-20 backdrop-blur-sm p-2 pl-3  rounded-lg  placeholder-black'
+                  className='w-[91.5%]  bg-white bg-opacity-20 backdrop-blur-sm p-2 pl-3  rounded-lg text-[#eafdf9] outline-none placeholder-[#fffa] outline-offset-0 focus:outline-[#d2fff7a0]'
                   type='text' name='instagram' value={insta} placeholder='Instagram'
                   onChange={(event)=>SetInsta(event.target.value)}></input>
               </div>
 
               <div className='w-[100%] flex mt-5'>
-                <img
-                  className='inline mx-4 size-12'
-                  src="https://img.icons8.com/ios-filled/50/linkedin.png" alt="linkedin" />
+              <FontAwesomeIcon className='inline mx-4 ml-1 my-1 size-10 text-[#b2d7d0]' icon={faLinkedin} />
                 <input
-                  className='w-[89.25%] bg-white bg-opacity-20 backdrop-blur-sm p-2 pl-3  rounded-lg placeholder-black'
+                  className='w-[91.5%] bg-white bg-opacity-20 backdrop-blur-sm p-2 pl-3 text-[#eafdf9] rounded-lg outline-none placeholder-[#fffa] outline-offset-0 focus:outline-[#d2fff7a0]'
                   type='text' name='linkedin' value={LinkedIn} placeholder='LinkedIn'
                   onChange={(event)=>SetLinkedIn(event.target.value)}></input>
               </div>
 
               <div className='w-[100%] flex mt-5'>
-                <img 
-                  className='inline mx-4 mb-[2px] size-12'
-                  src="https://img.icons8.com/glyph-neue/64/github.png" alt="github" />
+              <FontAwesomeIcon className='inline mx-4 ml-1 my-1 size-10 text-[#b2d7d0]' icon={faGithub} />
                 <input
-                  className='w-[89.25%] bg-white bg-opacity-20 backdrop-blur-sm p-2 pl-3  rounded-lg  placeholder-black'
+                  className='w-[91.5%] bg-white bg-opacity-20 backdrop-blur-sm p-2 pl-3 text-[#eafdf9] rounded-lg outline-none placeholder-[#fffa] outline-offset-0 focus:outline-[#d2fff7a0]'
                   type='text' name='github' value={GitHub} placeholder='GitHub'
                   onChange={(event)=>SetGitHub(event.target.value)}></input>
               </div>
@@ -194,6 +200,7 @@ function Login() {
                 className='hidden'
                 type='submit' />
             </button>
+            <FontAwesomeIcon className={`ml-4 ${submit} text-[#b2d7d0]`} icon={faCircleCheck} />
           </div>
         </form>
         <br />

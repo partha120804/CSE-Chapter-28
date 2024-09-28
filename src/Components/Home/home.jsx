@@ -27,17 +27,8 @@ function home() {
           />
           </h2>
           <p class=" text-lg solway lg:text-3xl">
-            <Typewriter
-            words={['This bootcamp is designed to spark your excitement and curiosity about knowing your seniors and about the college life which offers a vibrant, interactive glimpse into what awaits you. This highlights the exciting side of college life, featuring fun events, college fests, inspiring student stories, and opportunities.']}
-            // ,'Our team has poured their hearts into making this website to give you a genuine glimpse into college life and help you feel excited about your future here. We hope you enjoy exploring it as much as we enjoyed making it for you!!!'
-
-            loop={1000}
-            cursor
-            cursorStyle='|'
-            typeSpeed={50}
-            deleteSpeed={30}
-            delaySpeed={6000}
-            />
+            This bootcamp is designed to spark your excitement and curiosity about knowing your seniors and about the college life which offers a vibrant, interactive glimpse into what awaits you. This highlights the exciting side of college life, featuring fun events, college fests, inspiring student stories, and opportunities.
+            {/* Our team has poured their hearts into making this website to give you a genuine glimpse into college life and help you feel excited about your future here. We hope you enjoy exploring it as much as we enjoyed making it for you!!! */}
           </p>
         </div>
              

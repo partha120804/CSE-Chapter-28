@@ -25,7 +25,7 @@
   
   .arrow {
     position: absolute;
-    filter: drop-shadow(1px 1px 5px #002f26);
+    filter: drop-shadow(1px 1px 2px #002f26);
     width: 2rem;
     height: 2rem;
     color: #b2d7d0;

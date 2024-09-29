@@ -67,14 +67,15 @@ const HeaderBlock = () => {
     <h1 className="mb-2 border-white ">
       <img className=" object-cover" src={smalpics.pic1}></img>
     </h1>
-    <p className="bg-[#86D293] text-center text-3xl">#FRESHER 2023</p>
-    <textarea
+    <div
       id="message"
       rows="8"
-      className="p-2.5 w-full text-xl text-gray-900  bg-gray-50 rounded-lg   focus:border-transparent focus:ring-0 focus:outline-none resize-none placeholder-opacity-100 placeholder-gray-500 bg-[#B2D7D0] bg-opacity-10 "
-      placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-      disabled
-    />
+      className="p-2.5 w-full text-xl text-gray-900  bg-gray-50 rounded-lg   focus:border-transparent focus:ring-0 focus:outline-none resize-none placeholder-opacity-100 placeholder-gray-500 bg-[#B2D7D0] bg-opacity-10 mt-5 text-[#FFF4B5] text-justify-center "
+      >
+      <p className="border-[#002f26] text-center text-3xl text-white ">FRESHERS</p>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+      
+    </div>
   </Block>
 );
 }
@@ -90,58 +91,61 @@ const SocialsBlock = () =>{
         rotate: "-1deg",
         scale: 1.05,
       }}
-      className="col-span-6 bg-black bg-opacity-50 border-b-[40px] border-white md:col-span-3"
+      className="col-span-6 bg-black bg-opacity-50  pb-[40px] md:col-span-3"
     >
-      <a
+      <div
         href="#"
-        className="grid h-full place-content-center text-3xl text-white"
+        className="grid h-full place-content-center text-3xl text-[#002f26]"
       >
 
         <img className="aspect-square object-cover" src={smalpics.pic2} />
     
-      </a>
+      </div>
     </Block>
     <Block
       whileHover={{
         rotate: "-1deg",
         scale: 1.05,
       }}
-      className="col-span-6 bg-black bg-opacity-50 border-b-[40px] border-red md:col-span-3"
+      className="col-span-6 bg-black bg-opacity-50  pb-[40px] md:col-span-3"
+
+
     >
-      <a
-        href="#"
+      <div
         className="grid h-full place-content-center text-3xl text-white bg-opacity-50"
       >
         <img className="aspect-square object-cover" src={smalpics.pic3}/>
-      </a>
+      </div>
     </Block>
     <Block
       whileHover={{
         rotate: "-1deg",
         scale:1.05,
       }}
-      className="col-span-6 bg-black bg-opacity-50 border-b-[40px] border-white md:col-span-3"
+      className="col-span-6 bg-black bg-opacity-50  pb-[40px] md:col-span-3"
+
     >
-      <a
+      <div
         href="#"
         className="grid h-full place-content-center text-3xl text-black"
       >
         <img className="aspect-square object-cover" src={smalpics.pic4}/>
-      </a>
+      </div>
     </Block>
     <Block
       whileHover={{
         rotate: "-1deg",
         scale: 1.05,
       }}
-      className="col-span-6 bg-black bg-opacity-50 border-b-[40px] border-white md:col-span-3"
+      className="col-span-6 bg-black bg-opacity-50  pb-[40px] md:col-span-3"
+
     >
-      <a
+      <div
         href="#"
         className="grid h-full place-content-center text-3xl text-white"
       >
         <img className="aspect-square object-cover" src={smalpics.pic5}/>
-      </a>
+      </div>
     </Block>
   </>
 );

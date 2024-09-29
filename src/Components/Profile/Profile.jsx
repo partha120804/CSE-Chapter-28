@@ -43,10 +43,10 @@ function Login() {
   let loadApi=()=>{
     let FunctionToBeCalled=async ()=>{
     let id;
-    id=user.email;
-    id=id.slice(0,7);
-    id=id.toUpperCase();
-    // id="B123067"
+    //id=user.email;
+    //id=id.slice(0,7);
+    //id=id.toUpperCase();
+    id="B123067"
     year="20"+((Number)(id.slice(2,4))+4);
     const result=await axios.get(`https://cse-chapter-28-server.vercel.app/api/${year}/id?id=${id}`);
     const dt=result.data;
@@ -119,7 +119,7 @@ function Login() {
                     w-[225px] h-[225px] 
                     rounded-full mx-auto hover:brightness-90 cursor-pointer object-cover'
                     
-                    src={img ?(imgFile?img:(`data:${contentType};base64,${img}`)): DefaultPfp}
+                    src={img ?(img): DefaultPfp}
                 />
                 <div className='bg-[#002f26] rounded-full h-[4.5rem] w-[4.5rem] absolute right-0 bottom-0'>
                 <label htmlFor='upload' className='h-[4.5rem] w-[4.5rem] rounded-full flex items-center justify-center'>

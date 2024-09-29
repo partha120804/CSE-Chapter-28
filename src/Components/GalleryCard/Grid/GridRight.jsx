@@ -63,11 +63,19 @@ const HeaderBlock = () => {
   const smalpics = location.state && location.state.smalpics;
   return(
   
-  <Block className="col-span-12  row-span-2 md:col-span-6">
+  <Block className="col-span-12  row-span-2 md:col-span-6 bg-black bg-opacity-50">
     <h1 className="mb-2 border-white ">
       <img className=" object-cover" src={smalpics.pic1}></img>
     </h1>
-    <p className="text-black text-center text-3xl">#FRESHER 2023</p>
+    <div
+      id="message"
+      rows="8"
+      className="p-2.5 w-full text-xl text-gray-900  bg-gray-50 rounded-lg   focus:border-transparent focus:ring-0 focus:outline-none resize-none placeholder-opacity-100 placeholder-gray-500 bg-[#B2D7D0] bg-opacity-10 mt-5 text-[#FFF4B5] text-justify-center "
+      >
+      <p className="border-[#002f26] text-center text-3xl text-white ">FRESHERS</p>
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+      
+    </div>
   </Block>
 );
 }
@@ -80,42 +88,45 @@ const SocialsBlock = () =>{
   <>
     <Block
       whileHover={{
-        rotate: "2.5deg",
-        scale: 1.1,
+        rotate: "-1deg",
+        scale: 1.05,
       }}
-      className="col-span-6 bg-white border-b-[40px] border-white md:col-span-3"
+      className="col-span-6 bg-black bg-opacity-50  pb-[40px] md:col-span-3"
     >
       <div
-        
-        className="grid h-full place-content-center text-3xl text-white"
+        href="#"
+        className="grid h-full place-content-center text-3xl text-[#002f26]"
       >
+
         <img className="aspect-square object-cover" src={smalpics.pic2} />
     
       </div>
     </Block>
     <Block
       whileHover={{
-        rotate: "-2.5deg",
-        scale: 1.1,
+        rotate: "-1deg",
+        scale: 1.05,
       }}
-      className="col-span-6 bg-white border-b-[40px] border-white md:col-span-3"
+      className="col-span-6 bg-black bg-opacity-50  pb-[40px] md:col-span-3"
+
+
     >
       <div
-       
-        className="grid h-full place-content-center text-3xl text-white"
+        className="grid h-full place-content-center text-3xl text-white bg-opacity-50"
       >
         <img className="aspect-square object-cover" src={smalpics.pic3}/>
       </div>
     </Block>
     <Block
       whileHover={{
-        rotate: "-2.5deg",
-        scale: 1.1,
+        rotate: "-1deg",
+        scale:1.05,
       }}
-      className="col-span-6 bg-zinc-50 border-b-[40px] border-white md:col-span-3"
+      className="col-span-6 bg-black bg-opacity-50  pb-[40px] md:col-span-3"
+
     >
       <div
-        
+        href="#"
         className="grid h-full place-content-center text-3xl text-black"
       >
         <img className="aspect-square object-cover" src={smalpics.pic4}/>
@@ -123,13 +134,14 @@ const SocialsBlock = () =>{
     </Block>
     <Block
       whileHover={{
-        rotate: "2.5deg",
-        scale: 1.1,
+        rotate: "-1deg",
+        scale: 1.05,
       }}
-      className="col-span-6 bg-white border-b-[40px] border-white md:col-span-3"
+      className="col-span-6 bg-black bg-opacity-50  pb-[40px] md:col-span-3"
+
     >
       <div
-       
+        href="#"
         className="grid h-full place-content-center text-3xl text-white"
       >
         <img className="aspect-square object-cover" src={smalpics.pic5}/>

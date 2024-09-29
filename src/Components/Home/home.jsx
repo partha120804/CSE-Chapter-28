@@ -2,7 +2,6 @@ import React from 'react'
 import  "./home.css"
 import ChapterLogo from '../../assets/logo/chapterlogo.svg'
 import welcome from '../../assets/logo/Welcome.svg'
-import welcomecali from '../../assets/logo/welcomecali.svg'
 import image from '../../assets/Nature.jpg'
 import Carousel from '../SwipeCarousel/SwipeCarousel';
 import Slider from './ImageSlider/slider';

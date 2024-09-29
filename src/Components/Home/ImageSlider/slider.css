@@ -5,11 +5,10 @@
     justify-content: center;
     align-items: center;
     width: 80vw; /* 80% of the viewport width */
-    height: 60vw; /* 60% of the viewport height */
+    height: 50vw; /* 60% of the viewport height */
 
     @media (min-width: 1024px) {
-      width: 70vw;
-      height: 50vw;
+      height: 40vw;
     }
   }
   

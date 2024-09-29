@@ -6,12 +6,21 @@
     src: url('../../assets/font/Sofia_Sans_Extra_Condensed/SofiaSansExtraCondensed-ExtraBold.ttf') format('truetype');
   }
 
+@font-face {
+    font-family: 'Ethnocentric';
+    src: url('../../assets/font/Ethnocentric/ethnocentric\ rg.otf') format('opentype');
+}
+
 .sofia{
     font-family: 'SofiaSEC', sans-serif;
 }
 
 .solway{
     font-family: "Solway", serif;
+}
+
+.ethno{
+    font-family: "Ethnocentric", serif;
 }
 
 .stroke{

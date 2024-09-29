@@ -7,7 +7,7 @@ import tailwindicon from "../../assets/logo/tailwind.png"
 import {
  faReact,faHtml5,faCss3Alt,faJs,faNode,faGithub
 } from "@fortawesome/free-brands-svg-icons";
-import { SiReact, SiJavascript, SiHtml5, SiCss3, SiGithub, SiTailwindcss, SiNodedotjs, SiVercel, SiMongodb, SiFigma  } from "react-icons/si";
+import { SiReact, SiJavascript, SiHtml5, SiCss3, SiGithub, SiTailwindcss, SiNodedotjs, SiVercel, SiMongodb  } from "react-icons/si";
 
 function about() {
   return (
@@ -38,15 +38,15 @@ We hope this platform serves as a helpful resource for staying connected, inform
 </div>
 <h1 className='text-5xl lg:text-7xl mb-5 mr-[10%] ml-[10%] text-white sofia'>Tech Stack Used</h1>
 <div className='mr-[10%] ml-[10%] mb-10 flex flex-row justify-between align-middle text-lg gap-[1em] lg:text-4xl flex-nowrap lg:gap-[1.5em] text-[#d0f0ea]'>
-<SiHtml5/>
-<SiCss3/>
-<SiJavascript/>
-<SiNodedotjs/>
-<SiMongodb/>
-<SiTailwindcss/>
-<SiVercel/>
-<SiGithub/>
-<SiFigma/>
+  <SiReact title="React"/>
+  <SiHtml5 title="HTML 5"/>
+  <SiCss3 title="CSS 3"/>
+  <SiJavascript title="JavaScript"/>
+  <SiNodedotjs title="Node.js"/>
+  <SiMongodb title="MongoDB"/>
+  <SiTailwindcss title="TailwindCSS"/>
+  <SiVercel title="Vercel"/>
+  <SiGithub title="GitHub"/>
 </div>
   </div>
   )

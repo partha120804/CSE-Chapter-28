@@ -2,19 +2,29 @@
    width:60%;
     height: 500px; 
     margin: 40px auto;
+    
+  }
+  .slider-container {
+    max-width: 100%; /* Make the slider container responsive */
+    margin: 0 auto; /* Center the slider container */
+  }
+  
+  .image-container {
+    width: 100%; /* Make the image container responsive */
+    /* Make the image container responsive */
+    object-fit: cover; /* Make the image cover the entire container */
+  }
+  
+  .image-container img {
+    width: 100%; /* Make the image responsive */
+     /* Make the image responsive */
+    object-fit: cover; /* Make the image cover the entire container */
   }
   .slide{
     margin:10px
   }
-  @media (max-width: 600px) {
-    .slider-container {
-      width: 100%; /* set the width to 100% on smaller screens */
-    }
-    .slider-slide {
-      width: 100% !important; /* override the slider's slide width */
-    }
-  }
-  .image-container {
+  
+   .image-container {
     position: relative;
     display: inline-block;
   }
@@ -42,22 +52,6 @@
     opacity: 0.7; 
   }
   
-  .image-container .heading {
-     position: absolute;
-    bottom: 0;
-    left: 30%; 
-    
-    transform: translateX(-50%);
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    color: #fff;
-    opacity: 0;
-    transform: translateY(60%); /* initially, the heading is at the bottom */
-    transition: opacity 0.5s, transform 0.5s; /* add a transition effect for the heading */
-  }
-  
-  .image-container:hover .heading {
-    opacity: 1; /* show the heading on hover */
-    transform: translateY(-30%); /* move the heading to the center */
+  .image-container:hover{
+    cursor:pointer;
   }

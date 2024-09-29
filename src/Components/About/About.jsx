@@ -7,6 +7,9 @@ import tailwindicon from "../../assets/logo/tailwind.png"
 import {
  faReact,faHtml5,faCss3Alt,faJs,faNode,faGithub
 } from "@fortawesome/free-brands-svg-icons";
+import krishna from "../../assets/about/krishna.png"
+import vanessa from "../../assets/about/vanessa.png"
+import priyanshu from "../../assets/about/priyanshu.png"
 
 function about() {
   return (
@@ -31,11 +34,14 @@ We hope this platform serves as a helpful resource for staying connected, inform
 <div className=' flex flex-col justify-center items-center mb-[90px]'>
   <h1 className='text-[5rem] font-semibold text-white mb-10 css'>Our Team</h1>
     <div className="cards flex-wrap flex flex-row justify-center gap-10 max-w-[80vw]">
-      <AboutCard  named="Krishna Kalra" id="B123067" work="Developer"/>
-      <AboutCard named="Shivashish Saklani" id="B123121" work="Developer"/>
-      <AboutCard named="Vanessa Reddy" id="B123058" work="Developer"/>
-      <AboutCard named="Partha Das" id="B123086" work="Developer"/>
-      <AboutCard named="Kohinoor" id="B123083" work="Developer"/>
+      <AboutCard  named="Krishna Kalra" pic={krishna}  work=" Frontend || Backend "/>
+      <AboutCard named="Shivashish Saklani"  work="Frontend "/>
+      <AboutCard named="Vanessa Reddy" pic={vanessa} work="UI/UX"/>
+      <AboutCard named="Partha Das" id="B123086" work="Frontend || UI/UX"/>
+      <AboutCard named="Kohinoor"  work="Frontend || UI/UX "/>
+      <AboutCard named="Priyanshu Shekhar" pic={priyanshu} work="UI||UX"/>
+      <AboutCard named="Manasmita Pradhan"  work="Content"/>
+      <AboutCard named="Dhairyawan Kumar Tiwari"  work=" Frontend "/>
       
       
     </div>

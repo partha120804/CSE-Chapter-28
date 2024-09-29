@@ -138,11 +138,11 @@ function ProfileCard({year}) {
               </div>
               <div className="flex w-[210px] justify-around">
                 {/* <FontAwesomeIcon className="size-7" icon={faInstagram} /> */}
-                {item.Instagram?<a href={item.Instagram}><FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform" icon={faInstagram} /></a>:''}
-                {item.GitHub?<a href={item.GitHub}><FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform " icon={faGithub} /></a>:''}
-                {item.LinkedIn?<a href={item.LinkedIn}> <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform" icon={faLinkedin} /></a>:''}
+                {item.Instagram?<a href={item.Instagram}><FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform" icon={faInstagram} title="Instagram" /></a>:''}
+                {item.GitHub?<a href={item.GitHub}><FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform " icon={faGithub} title="GitHub"/></a>:''}
+                {item.LinkedIn?<a href={item.LinkedIn}> <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform" icon={faLinkedin} title="LinkedIn" /></a>:''}
                 <a href={'https://mail.google.com/mail/?view=cm&to='+item.id+'@iiit-bh.ac.in'}>
-                  <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform" icon={faEnvelope} />
+                  <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform" icon={faEnvelope} title={"Mail "+item.id} />
                 </a>
               </div>
             </div>

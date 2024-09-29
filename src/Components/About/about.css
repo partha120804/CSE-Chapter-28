@@ -6,11 +6,11 @@
     src: url('../../assets/font/Sofia_Sans_Extra_Condensed/SofiaSansExtraCondensed-ExtraBold.ttf') format('truetype');
   }
 
-.css{
+.sofia{
     font-family: 'SofiaSEC', sans-serif;
 }
 
-.color{
+.solway{
     font-family: "Solway", serif;
 }
 .stroke{

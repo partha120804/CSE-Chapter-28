@@ -85,13 +85,13 @@ const SocialsBlock = () =>{
       }}
       className="col-span-6 bg-white border-b-[40px] border-white md:col-span-3"
     >
-      <a
-        href="#"
+      <div
+        
         className="grid h-full place-content-center text-3xl text-white"
       >
         <img className="aspect-square object-cover" src={smalpics.pic2} />
     
-      </a>
+      </div>
     </Block>
     <Block
       whileHover={{
@@ -100,12 +100,12 @@ const SocialsBlock = () =>{
       }}
       className="col-span-6 bg-white border-b-[40px] border-white md:col-span-3"
     >
-      <a
-        href="#"
+      <div
+       
         className="grid h-full place-content-center text-3xl text-white"
       >
         <img className="aspect-square object-cover" src={smalpics.pic3}/>
-      </a>
+      </div>
     </Block>
     <Block
       whileHover={{
@@ -114,12 +114,12 @@ const SocialsBlock = () =>{
       }}
       className="col-span-6 bg-zinc-50 border-b-[40px] border-white md:col-span-3"
     >
-      <a
-        href="#"
+      <div
+        
         className="grid h-full place-content-center text-3xl text-black"
       >
         <img className="aspect-square object-cover" src={smalpics.pic4}/>
-      </a>
+      </div>
     </Block>
     <Block
       whileHover={{
@@ -128,12 +128,12 @@ const SocialsBlock = () =>{
       }}
       className="col-span-6 bg-white border-b-[40px] border-white md:col-span-3"
     >
-      <a
-        href="#"
+      <div
+       
         className="grid h-full place-content-center text-3xl text-white"
       >
         <img className="aspect-square object-cover" src={smalpics.pic5}/>
-      </a>
+      </div>
     </Block>
   </>
 );

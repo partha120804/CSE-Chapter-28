@@ -63,7 +63,7 @@ const HeaderBlock = () => {
   const smalpics = location.state && location.state.smalpics;
   return(
   
-  <Block className="col-span-12  row-span-2 md:col-span-6 bg-[#C1CFA1]">
+  <Block className="col-span-12  row-span-2 md:col-span-6 bg-black bg-opacity-50">
     <h1 className="mb-2 border-white ">
       <img className=" object-cover" src={smalpics.pic1}></img>
     </h1>
@@ -71,7 +71,7 @@ const HeaderBlock = () => {
     <textarea
       id="message"
       rows="8"
-      className="p-2.5 w-full text-xl text-gray-900  bg-gray-50 rounded-lg border border-gray-300 focus:border-transparent focus:ring-0 focus:outline-none resize-none placeholder-opacity-100 placeholder-gray-500"
+      className="p-2.5 w-full text-xl text-gray-900  bg-gray-50 rounded-lg   focus:border-transparent focus:ring-0 focus:outline-none resize-none placeholder-opacity-100 placeholder-gray-500 bg-[#B2D7D0] bg-opacity-10 "
       placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
       disabled
     />
@@ -90,7 +90,7 @@ const SocialsBlock = () =>{
         rotate: "-1deg",
         scale: 1.05,
       }}
-      className="col-span-6 bg-[#C1CFA1] border-b-[40px] border-white md:col-span-3"
+      className="col-span-6 bg-black bg-opacity-50 border-b-[40px] border-white md:col-span-3"
     >
       <a
         href="#"
@@ -106,11 +106,11 @@ const SocialsBlock = () =>{
         rotate: "-1deg",
         scale: 1.05,
       }}
-      className="col-span-6 bg-[#C1CFA1] border-b-[40px] border-red md:col-span-3"
+      className="col-span-6 bg-black bg-opacity-50 border-b-[40px] border-red md:col-span-3"
     >
       <a
         href="#"
-        className="grid h-full place-content-center text-3xl text-white"
+        className="grid h-full place-content-center text-3xl text-white bg-opacity-50"
       >
         <img className="aspect-square object-cover" src={smalpics.pic3}/>
       </a>
@@ -120,7 +120,7 @@ const SocialsBlock = () =>{
         rotate: "-1deg",
         scale:1.05,
       }}
-      className="col-span-6 bg-[#C1CFA1] border-b-[40px] border-white md:col-span-3"
+      className="col-span-6 bg-black bg-opacity-50 border-b-[40px] border-white md:col-span-3"
     >
       <a
         href="#"
@@ -134,7 +134,7 @@ const SocialsBlock = () =>{
         rotate: "-1deg",
         scale: 1.05,
       }}
-      className="col-span-6 bg-[#C1CFA1] border-b-[40px] border-white md:col-span-3"
+      className="col-span-6 bg-black bg-opacity-50 border-b-[40px] border-white md:col-span-3"
     >
       <a
         href="#"

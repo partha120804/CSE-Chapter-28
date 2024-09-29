@@ -59,7 +59,7 @@ const HeaderBlock = () => (
     <h1 className="mb-2 border-white ">
       <img src={images[0]}></img>
     </h1>
-    <p className="text-black text-center text-3xl">#FRESHER 2023</p>
+    <p className="text-black text-center text-3xl bg-[#C1E2A4]">#FRESHER 2023</p>
   </Block>
 );
 

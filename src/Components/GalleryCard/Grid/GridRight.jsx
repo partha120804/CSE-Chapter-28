@@ -94,8 +94,13 @@ const SocialsBlock = () =>{
       className="col-span-6 bg-black bg-opacity-50  pb-[40px] md:col-span-3"
     >
       <div
+<<<<<<< HEAD
         href="#"
         className="grid h-full place-content-center text-3xl text-[#002f26]"
+=======
+        
+        className="grid h-full place-content-center text-3xl text-white"
+>>>>>>> 31747655cc3e6f691cf53007b3f34f465cdb5ae1
       >
 
         <img className="aspect-square object-cover" src={smalpics.pic2} />
@@ -112,7 +117,12 @@ const SocialsBlock = () =>{
 
     >
       <div
+<<<<<<< HEAD
         className="grid h-full place-content-center text-3xl text-white bg-opacity-50"
+=======
+       
+        className="grid h-full place-content-center text-3xl text-white"
+>>>>>>> 31747655cc3e6f691cf53007b3f34f465cdb5ae1
       >
         <img className="aspect-square object-cover" src={smalpics.pic3}/>
       </div>
@@ -126,7 +136,11 @@ const SocialsBlock = () =>{
 
     >
       <div
+<<<<<<< HEAD
         href="#"
+=======
+        
+>>>>>>> 31747655cc3e6f691cf53007b3f34f465cdb5ae1
         className="grid h-full place-content-center text-3xl text-black"
       >
         <img className="aspect-square object-cover" src={smalpics.pic4}/>
@@ -141,7 +155,11 @@ const SocialsBlock = () =>{
 
     >
       <div
+<<<<<<< HEAD
         href="#"
+=======
+       
+>>>>>>> 31747655cc3e6f691cf53007b3f34f465cdb5ae1
         className="grid h-full place-content-center text-3xl text-white"
       >
         <img className="aspect-square object-cover" src={smalpics.pic5}/>

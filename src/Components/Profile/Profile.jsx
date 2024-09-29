@@ -26,6 +26,7 @@ function Login() {
   let ImageInput=async (e)=>{
     const file=e.target.files[0];
     const image=await imagebase64(file);
+    setImgFile(file);
     setImg(image);
   };
   const [insta,SetInsta]=useState('');
@@ -36,6 +37,8 @@ function Login() {
   const [data, setData] = useState([]);
   const[submit,setSubmit]=useState('invisible');
   const { user, isAuthenticated } = useAuth0();
+  const [imgFile,setImgFile]=useState();
+  const [contentType,setContentType]=useState();
   let year;
   let loadApi=()=>{
     let FunctionToBeCalled=async ()=>{
@@ -51,8 +54,10 @@ function Login() {
     console.log(result.data);
     setLoad(true);
     console.log(loading);
-    if(dt[0].image)
+    if(dt[0].image){
     setImg(dt[0].image);
+    setContentType(dt[0].contentType);
+    }
     if(dt[0].Instagram)
       SetInsta(dt[0].Instagram);
     if(dt[0].GitHub)
@@ -79,18 +84,19 @@ function Login() {
   let SubmitCall=async (e)=>{
     e.preventDefault();
     year="20"+((Number)(data[0].id.slice(2,4))+4);
+    const form=new FormData();
+    if(imgFile)
+    form.append("images",imgFile);
+    form.append("location",Location);
+    form.append("instagram",insta);
+    form.append("github",GitHub);
+    form.append("description",Description);
+    form.append("linkedin",LinkedIn);
+    form.append("id",data[0].id);
     await axios.post(`https://cse-chapter-28-server.vercel.app/api/${year}/profile`,
-      {
-        id:data[0].id, // This is the body part
-        location:Location,
-        instagram:insta,
-        github:GitHub,
-        description:Description,
-        image:img,
-        linkedin:LinkedIn
-      },{
+      form,{
         headers:{
-          'Content-Type':'application/x-www-form-urlencoded'
+          'Content-Type':'multipart/form-data'
         }
       }
     );
@@ -113,7 +119,7 @@ function Login() {
                     w-[225px] h-[225px] 
                     rounded-full mx-auto hover:brightness-90 cursor-pointer object-cover'
                     
-                    src={img ? img : DefaultPfp}
+                    src={img ?(img): DefaultPfp}
                 />
                 <div className='bg-[#002f26] rounded-full h-[4.5rem] w-[4.5rem] absolute right-0 bottom-0'>
                 <label htmlFor='upload' className='h-[4.5rem] w-[4.5rem] rounded-full flex items-center justify-center'>

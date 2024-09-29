@@ -41,6 +41,7 @@ function ProfileCard({year}) {
   let [LinkedIn, setLinkedIn] = useState("");
   let [Fid, setFid] = useState("");
   let [pfp,setPfp]=useState('');
+  let [contentType,setContentType]=useState('');
   useEffect(datageter,[year]);
   const [pop, popState] = useState("hidden");
   let popup = (item) => {
@@ -54,6 +55,7 @@ function ProfileCard({year}) {
       setGitHub(item.GitHub);
       setFid(item.id);
       setPfp(item.image);
+      setContentType(item.contentType);
     }
     popState("visible");
   };
@@ -83,7 +85,7 @@ function ProfileCard({year}) {
               <div className="relative sm:w-[50%] w-[70%] lg:w-[80%] rounded-full">
                 <img
                   className="size-[100%] z-20 aspect-square rounded-full border-[#002f26] border-8 object-cover"
-                  src={pfp?pfp:image}
+                  src={pfp?(pfp):image}
                 />
                 <div className="h-[80px] w-[80px] z-20 rounded-full bg-[#002f26] absolute  right-0 bottom-0 flex justify-center items-center">
                   <p className="text-white text-3xl font-bold">{Number(id)}</p>
@@ -128,7 +130,7 @@ function ProfileCard({year}) {
               className="pcard  h-[400px] w-[275px] backdrop-blur-md backdrop-brightness-[80%] hover:backdrop-brightness-[60%] border-2 rounded-xl border-[#E1E1E1] border-opacity-30 flex justify-around items-center flex-col text-[#d0f0ea] hover:text-[#ffffff] hover:scale-[1.05] transform transition duration-500 ease-in-out"
             >
               <div className="mt-3 rounded-full h-[195px] w-[195px]">
-                <img className="h-[195px] w-[195px] object-cover rounded-full" src={item.image?item.image:image} />
+                <img className="h-[195px] w-[195px] object-cover rounded-full" src={item.image?(item.image):image} />
               </div>
               <div className="flex items-center flex-col">
                 <p className=" text-3xl text-center">{item.name}</p>

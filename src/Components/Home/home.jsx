@@ -14,9 +14,9 @@ function home() {
             <img className='lg:mb-[20%] h-[25vh] lg:h-[50vh] w-[80vw]' src={ChapterLogo}/>
         </div>
         <div class="text-[#d0f0ea] ml-[10%] mr-[10%] flex flex-col items-center justify-center gap-5 text-justify">
-        <div className='flex justify-center items-baseline'>
+        {/* <div className='flex justify-center items-baseline'>
         <img className=' mt-4 h-[5vh] lg:h-[20vh] w-[85vw] lg:w-[55vw]' src={welcome}/>
-        </div>
+        </div> */}
         <div className='flex justify-center items-baseline'>
         <svg id="welcometext" width="3275" height="567" viewBox="0 0 3275 567" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_2154_345)">

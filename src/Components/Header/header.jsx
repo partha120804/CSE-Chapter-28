@@ -17,12 +17,12 @@ function header() {
     console.log(year);
     let id = user.email.slice(0, 7).toUpperCase();
     const check = await axios.get(
-      "https://cse-chapter-28-server.vercel.app/api/" + year + "/id?id=" + id
+      "https://localhost:3000/api/" + year + "/id?id=" + id
     );
     if (check.data.length == 0) {
       try {
         await axios.post(
-          "https://cse-chapter-28-server.vercel.app/api/" +
+          "https://localhost:3000/api/" +
             year +
             "/add?name=" +
             user.name +

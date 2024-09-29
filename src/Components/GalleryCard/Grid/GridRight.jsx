@@ -50,7 +50,7 @@ const Block = ({ className, ...rest }) => {
         damping: 50,
       }}
       className={twMerge(
-        "col-span-4 rounded-lg border bg-white p-5",
+        "col-span-4 rounded-lg bg-white p-5",
         className
       )}
       {...rest}
@@ -70,7 +70,7 @@ const HeaderBlock = () => {
     <div
       id="message"
       rows="8"
-      className="p-2.5 w-full text-xl text-gray-900  bg-gray-50 rounded-lg   focus:border-transparent focus:ring-0 focus:outline-none resize-none placeholder-opacity-100 placeholder-gray-500 bg-[#B2D7D0] bg-opacity-10 mt-5 text-[#FFF4B5] text-justify-center "
+      className="p-2.5 w-full text-xl rounded-lg   focus:border-transparent focus:ring-0 focus:outline-none resize-none placeholder-opacity-100 placeholder-gray-500 bg-[#B2D7D0] bg-opacity-10 mt-5 text-[#FFF4B5] text-justify-center "
       >
       <p className="border-[#002f26] text-center text-3xl text-white ">FRESHERS</p>
        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
@@ -88,8 +88,8 @@ const SocialsBlock = () =>{
   <>
     <Block
       whileHover={{
-        rotate: "-1deg",
-        scale: 1.05,
+        rotate: -1.5+"deg",
+        scale: 1.06,
       }}
       className="col-span-6 bg-black bg-opacity-50  pb-[40px] md:col-span-3"
     >
@@ -104,8 +104,8 @@ const SocialsBlock = () =>{
     </Block>
     <Block
       whileHover={{
-        rotate: "-1deg",
-        scale: 1.05,
+        rotate: 1.5+"deg",
+        scale: 1.06,
       }}
       className="col-span-6 bg-black bg-opacity-50  pb-[40px] md:col-span-3"
 
@@ -119,8 +119,8 @@ const SocialsBlock = () =>{
     </Block>
     <Block
       whileHover={{
-        rotate: "-1deg",
-        scale:1.05,
+        rotate: -1.5+"deg",
+        scale:1.06,
       }}
       className="col-span-6 bg-black bg-opacity-50  pb-[40px] md:col-span-3"
 
@@ -134,8 +134,8 @@ const SocialsBlock = () =>{
     </Block>
     <Block
       whileHover={{
-        rotate: "-1deg",
-        scale: 1.05,
+        rotate: 1.5+"deg",
+        scale: 1.06,
       }}
       className="col-span-6 bg-black bg-opacity-50  pb-[40px] md:col-span-3"
 

@@ -30,6 +30,7 @@ const data = [
   {
     "src": advaita,
     "title": "ADVAITA",
+    "para": "Advaita is the annual techno-cultural fest of IIIT Bhubaneswar, blending technology, culture, and innovation. It features a wide array of events, from coding competitions and robotics challenges to music, dance, and art, fostering a spirit of creativity and competition. ",
      "smalpics":{
       "pic1":crowd,
         "pic2":marathon,
@@ -43,6 +44,7 @@ const data = [
   {
     "src": tasveer,
     "title": "TASVEER",
+    "para": "Tasveer is the farewell event dedicated to the 4th-year students, celebrating their journey and memories in college. The event is filled with nostalgic moments, speeches, and performances, offering a heartfelt goodbye to the graduating batch. It marks the end of one chapter and the beginning of new adventures, leaving behind cherished memories.",
     "smalpics":{
         "pic1":t1,
         "pic2":t2,
@@ -54,6 +56,7 @@ const data = [
     {
       "src": fresher,
       "title": "FRESHER'S",
+      "para": "The Freshers' event is a vibrant welcome party for the new batch, aimed at helping them integrate into college life. It features fun games, performances, and introductions, allowing freshers to bond with seniors and peers. This event sets a positive tone for their journey ahead, filled with excitement and new friendships.",
       "smalpics":{
           "pic1":freshertitile,
           "pic2":acad,
@@ -104,7 +107,7 @@ function Event() {
         {data.map((item, index) => {
             const handleClick = (item) => {
                 console.log(item);
-                navigate('/Gallery/image', { state:{smalpics:item.smalpics} });
+                navigate('/Gallery/image', { state:{smalpics:item.smalpics,title:item.title,para:item.para} });
               };
             return(
             <div  className='p-3 ' key={index}>

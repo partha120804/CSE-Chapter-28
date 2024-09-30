@@ -1,17 +1,31 @@
+import React, { useState } from 'react';
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { NavLink } from 'react-router-dom'
 export default function Example({DropUp}) {
+  const [dropdownactive, setdropdownactive] = useState(false);
+
+  const handleDropDown = () => {
+    setdropdownactive(!dropdownactive);
+  };
+  const closeDropDown = () => {
+    setdropdownactive(false);
+  };
   return (
-    <Menu as="div" className="relative inline-block text-left" 
-    onClick={close} >
+    <Menu as="div"
+    onClick={()=>{close();
+      closeDropDown();
+    }}
+    className={`relative ${dropdownactive? 'pb-48 transform duration-100 ease-out': 'pb-0 transform duration-75 ease-in'} inline-block text-left`}
+    >
       <div>
-        <MenuButton className="`block pr-4 pl-3 lg:duration-200 lightcolor hover:bg-transparent border-0  lg:p-0">
+        <MenuButton className={`block pr-4 pl-3 lg:duration-200 lightcolor hover:bg-transparent border-0 lg:p-0`} onClick={handleDropDown}>
           BATCHES
         </MenuButton>
       </div>
       
       <MenuItems
         onClick={()=>{close();
+          closeDropDown();
           DropUp();
         }}
         transition
@@ -21,12 +35,14 @@ export default function Example({DropUp}) {
         <div className="py-1">
           
           <MenuItem onClick={()=>{close();
+          closeDropDown();
             DropUp();
           }}>
            
               {({ close }) => (
               <NavLink
                   onClick={()=>{close();
+                    closeDropDown();
                     DropUp();
                   }}
                   to="/Batches:2026"
@@ -41,6 +57,7 @@ export default function Example({DropUp}) {
                 {({ close }) => (
                 <NavLink
                   onClick={()=>{close();
+                    closeDropDown();
                     DropUp();
                   }}
                   to="/Batches:2027"
@@ -55,6 +72,7 @@ export default function Example({DropUp}) {
               {({ close }) => (
               <NavLink
                   onClick={()=>{close();
+                    closeDropDown();
                     DropUp();
                   }}
                   to="/Batches:2028"

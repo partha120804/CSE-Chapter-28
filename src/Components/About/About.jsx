@@ -8,9 +8,11 @@ import {
  faReact,faHtml5,faCss3Alt,faJs,faNode,faGithub
 } from "@fortawesome/free-brands-svg-icons";
 import { SiReact, SiJavascript, SiHtml5, SiCss3, SiGithub, SiTailwindcss, SiNodedotjs, SiVercel, SiMongodb  } from "react-icons/si";
-import krishna from "../../assets/about/krishna.png"
-import vanessa from "../../assets/about/vanessa.png"
-import priyanshu from "../../assets/about/priyanshu.png"
+import krishna from "../../assets/about/krishna.png";
+import vanessa from "../../assets/about/vanessa.png";
+import priyanshu from "../../assets/about/priyanshu.png";
+import kohinoor from "../../assets/about/kohinoor.jpg";
+import partha from "../../assets/about/partha.jpg";
 
 function about() {
   return (
@@ -30,14 +32,44 @@ We hope this platform serves as a helpful resource for staying connected, inform
 <div className=' flex flex-col justify-center items-center mb-[90px]'>
   <h1 className='text-7xl lg:text-8xl mb-6 mr-[10%] ml-[10%] font-semibold text-white sofia'>Our Team</h1>
     <div className="cards flex-wrap flex flex-row justify-center gap-10 max-w-[80vw]">
-      <AboutCard  named="Krishna Kalra" pic={krishna}  work=" Frontend || Backend "/>
-      <AboutCard named="Shivashish Saklani"  work="Frontend "/>
-      <AboutCard named="Vanessa Reddy" pic={vanessa} work="UI/UX"/>
-      <AboutCard named="Partha Das" id="B123086" work="Frontend || UI/UX"/>
-      <AboutCard named="Kohinoor"  work="Frontend || UI/UX "/>
-      <AboutCard named="Priyanshu Shekhar" pic={priyanshu} work="UI||UX"/>
-      <AboutCard named="Manasmita Pradhan"  work="Content"/>
-      <AboutCard named="Dhairyawan Kumar Tiwari"  work=" Frontend "/>
+      <AboutCard named="Krishna Kalra" 
+        pic={krishna}
+        id="B123067"
+        work=" Frontend || Backend "
+      />
+      <AboutCard named="Shivashish Saklani"
+        work="Frontend "
+      />
+      <AboutCard named="Partha Sarathi Das"
+        pic={partha}
+        id="B123086"
+        Instagram="https://www.instagram.com/its_partha.sd/"
+        GitHub="https://github.com/partha120804/"
+        LinkedIn="https://www.linkedin.com/in/parthadas12/"
+        work="Frontend || UI/UX"
+      />
+      <AboutCard named="Kohinoor"
+        pic={kohinoor}
+        id="B123083"
+        Instagram="https://www.instagram.com/_kohinoooorr"
+        GitHub="https://github.com/kohi-noor"
+        LinkedIn="https://www.linkedin.com/in/kohinoor-p-6492aa282/"
+        work="Frontend || UI/UX "
+      />
+      <AboutCard named="Priyanshu Shekhar"
+        pic={priyanshu}
+        work=" UI/UX "
+      />
+      <AboutCard named="Vanessa Reddy"
+        pic={vanessa}
+        work=" UI/UX "
+      />
+      <AboutCard named="Manasmita Pradhan"
+        work=" Content "
+      />
+      <AboutCard named="Dhairyawan Kumar Tiwari"
+        work=" Frontend "
+      />
       
       
     </div>

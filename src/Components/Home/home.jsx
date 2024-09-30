@@ -14,7 +14,7 @@ function home() {
             <img className='lg:mb-[20%] h-[25vh] lg:h-[50vh] w-[80vw]' src={ChapterLogo}/>
         </div>
         <div class="text-[#d0f0ea] ml-[10%] mr-[10%] flex flex-col items-center justify-center gap-5 text-justify">
-        <h1 class="text-center text-3xl text-[#002f26] stroke-col lg:text-[#d0f0ea] ethno font-semibold tracking-wider lg:text-5xl">
+        <h1 class="text-center text-3xl stroke-col text-[#d0f0ea] ethno font-semibold tracking-wider lg:text-5xl">
           <Typewriter
           words={['WELCOME FRESHERS...','A HEARTY WELCOME TO THE CSE CHAPTER \'28']}
           loop={0}

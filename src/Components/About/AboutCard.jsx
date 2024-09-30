@@ -18,7 +18,7 @@ function AboutCard(props) {
                 <img className="h-[195px] w-[195px] rounded-full object-cover" src={props.pic} />
               </div>
               <div className="flex items-center flex-col">
-                <p className=" text-3xl">{props.named}</p>
+                <p className=" text-3xl text-center ">{props.named}</p>
               
                 <p className=" text-2xl">{props.work}</p>
               </div>

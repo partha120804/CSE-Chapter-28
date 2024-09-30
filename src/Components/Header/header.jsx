@@ -108,7 +108,7 @@ function header() {
                 </NavLink>
               </li>
 
-              {true? (
+              {isAuthenticated? (
                 <li onClick={DisableBar}>
                   <NavLink
                     to="/Profile"

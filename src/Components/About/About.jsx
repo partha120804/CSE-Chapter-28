@@ -69,6 +69,14 @@ We hope this platform serves as a helpful resource for staying connected, inform
         email="b123083@iiit-bh.ac.in"
         work="Frontend || UI/UX "
       />
+      <AboutCard named="Dhairyawan Kumar Tiwari"
+        pic={dhairyawan}
+         Instagram="https://www.instagram.com/dhairyawankumartiwari"
+         GitHub="https://github.com/dhairyawan"
+         LinkedIn="hhttps://www.linkedin.com/in/dhairyawan-kumar-tiwari-b5888328b"
+         email="b123051@iiit-bh.ac.in"
+        work=" Frontend "
+      />
       <AboutCard named="Priyanshu Shekhar"
         pic={priyanshu}
         LinkedIn="https://www.linkedin.com/in/priyanshu01shekhar01/"
@@ -89,15 +97,9 @@ We hope this platform serves as a helpful resource for staying connected, inform
         work=" Content "
         GitHub="https://github.com/Manasmita-05"
         LinkedIn="https://www.linkedin.com/in/manasmita-pradhan-470a89292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+        email="b123072@iiit-bh.ac.in"
       />
-      <AboutCard named="Dhairyawan Kumar Tiwari"
-        pic={dhairyawan}
-         Instagram="https://www.instagram.com/dhairyawankumartiwari"
-         GitHub="https://github.com/dhairyawan"
-         LinkedIn="hhttps://www.linkedin.com/in/dhairyawan-kumar-tiwari-b5888328b"
-         email="b123051@iiit-bh.ac.in"
-        work=" Frontend "
-      />
+      
       
       
     </div>

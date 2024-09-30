@@ -25,7 +25,7 @@ const router = createBrowserRouter(
       <Route path="Batches:2027" element={<Batches year='2027' />} />
       <Route path="Batches:2028" element={<Batches year='2028' />} />
       <Route path="About" element={<About />} />
-      <Route path="Profile" element=  {<Profile />} />
+      <Route path="Profile" element=  {<Profile refresh='1'/>} />
 
     </Route>
   )

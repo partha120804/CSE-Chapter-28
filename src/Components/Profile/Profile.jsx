@@ -11,7 +11,7 @@ import {
   faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-function Login() {
+function Login(refresh) {
   const [img,setImg]=useState();
   const [loading,setLoad]=useState(false);
   const imagebase64=(file)=>{
@@ -72,7 +72,7 @@ function Login() {
   setLoad(false);
   FunctionToBeCalled();
 };
-  useEffect(loadApi,[]);
+  useEffect(loadApi,[refresh]);
   function timeout(delay) {
     return new Promise( res => setTimeout(res, delay) );
   }

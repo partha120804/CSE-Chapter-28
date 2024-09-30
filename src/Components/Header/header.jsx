@@ -36,8 +36,8 @@ function header() {
   };
   if (isAuthenticated) {
     const email = user.email;
-    const BranchChange=["323027"]
-    if (email.slice(0, 2) != "b1" ) {
+    const BranchChange=["b323027","b523055","b423024","b223048","b523068"]
+    if (email.slice(0, 2) != "b1"&&!BranchChange.includes(email.slice(0,7)) ) {
       alert("Email Invailid");
       logout();
     } else {

@@ -11,7 +11,7 @@ import {
   faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-function Login(refresh) {
+function Login({refresh}) {
   const [img,setImg]=useState();
   const [loading,setLoad]=useState(false);
   const imagebase64=(file)=>{

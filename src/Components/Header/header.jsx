@@ -63,7 +63,7 @@ function header() {
           </div>
           <div className="header flex">
             <ul
-              className={`flex ${hamburger} fixed top-0 right-0 sm:visible sm:static z-20 flex-col sm:flex-row text-[2.25rem] mt-6 mr-8 font-bold lg:space-x-8 h-20 max-w-[600px] max-h-20`}
+              className={`  flex ${hamburger} fixed top-0 right-0 sm:visible sm:static z-20 flex-col sm:flex-row text-[2.25rem] mt-6 mr-8 font-bold lg:space-x-8 h-20 max-w-[600px] max-h-20`}
             >
               <li onClick={DisableBar}>
                 <NavLink
@@ -136,7 +136,7 @@ function header() {
             <FontAwesomeIcon
               icon={faBars}
               style={{ color: "#004040" }}
-              className="mt-[1.8rem] mx-4 h-10 sm:hidden"
+              className="mt-[1.8rem] mx-4 h-10 sm:hidden hover:cursor-pointer hover:scale-110 transition duration-300 ease-in-out"
               onClick={EnableBar}
             />
           </div>

@@ -13,6 +13,9 @@ import vanessa from "../../assets/about/vanessa.png";
 import priyanshu from "../../assets/about/priyanshu.png";
 import kohinoor from "../../assets/about/kohinoor.jpg";
 import partha from "../../assets/about/partha.jpg";
+import shivashish from "../../assets/about/shivashish.png";
+import manasmita from "../../assets/about/masnasmita.jpg";
+import dhairyawan from '../../assets/about/Dhairyawan.jpg';
 
 function about() {
   return (
@@ -34,40 +37,65 @@ We hope this platform serves as a helpful resource for staying connected, inform
     <div className="cards flex-wrap flex flex-row justify-center gap-10 max-w-[80vw]">
       <AboutCard named="Krishna Kalra" 
         pic={krishna}
-        id="B123067"
+        Instagram="https://www.instagram.com/krishna_kalra_7/"
+        GitHub="https://github.com/KrishnaKalra/"
+        LinkedIn="https://www.linkedin.com/in/krishna-kalra-88aa72286/"
+         email="b123067@iiit-bh.ac.in"
         work=" Frontend || Backend "
       />
       <AboutCard named="Shivashish Saklani"
+      pic={shivashish}
+      Instagram="https://www.instagram.com/_shivashish_23/"
+        GitHub="https://github.com/Shivashish023"
+        LinkedIn="https://www.linkedin.com/in/shivashish-saklani-660173280"
+        email="b123121@iiit-bh.ac.in"
         work="Frontend "
       />
       <AboutCard named="Partha Sarathi Das"
         pic={partha}
-        id="B123086"
+      
         Instagram="https://www.instagram.com/its_partha.sd/"
         GitHub="https://github.com/partha120804/"
         LinkedIn="https://www.linkedin.com/in/parthadas12/"
+        email="b123086@iiit-bh.ac.in"
         work="Frontend || UI/UX"
       />
       <AboutCard named="Kohinoor"
         pic={kohinoor}
-        id="B123083"
+        
         Instagram="https://www.instagram.com/_kohinoooorr"
         GitHub="https://github.com/kohi-noor"
         LinkedIn="https://www.linkedin.com/in/kohinoor-p-6492aa282/"
+        email="b123083@iiit-bh.ac.in"
         work="Frontend || UI/UX "
       />
       <AboutCard named="Priyanshu Shekhar"
         pic={priyanshu}
+        LinkedIn="https://www.linkedin.com/in/priyanshu01shekhar01/"
+        GitHub="https://github.com/TitoTimber"
+        email="b323027@iiit-bh.ac.in"
         work=" UI/UX "
       />
-      <AboutCard named="Vanessa Reddy"
+      <AboutCard named="Vanessa G Reddy"
         pic={vanessa}
+        Instagram="https://www.instagram.com/simplyy._vee?igsh=MWQ2MDJzdDl1dXdkeg=="
+          GitHub="https://github.com/dhairyawan"
+          LinkedIn="https://www.linkedin.com/in/g-vanessa-reddy-785943297/"
+          email="b123058@iiit-bh.ac.in"
         work=" UI/UX "
       />
       <AboutCard named="Manasmita Pradhan"
+      pic={manasmita  }
         work=" Content "
+        GitHub="https://github.com/Manasmita-05"
+        LinkedIn="https://www.linkedin.com/in/manasmita-pradhan-470a89292?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
       />
       <AboutCard named="Dhairyawan Kumar Tiwari"
+        pic={dhairyawan}
+         Instagram="https://www.instagram.com/dhairyawankumartiwari"
+         GitHub="https://github.com/dhairyawan"
+         LinkedIn="hhttps://www.linkedin.com/in/dhairyawan-kumar-tiwari-b5888328b"
+         email="b123051@iiit-bh.ac.in"
         work=" Frontend "
       />
       

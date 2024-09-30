@@ -98,8 +98,8 @@ function Event() {
   };
     const navigate = useNavigate();
   return (
-    <div className='flex justify-center'>
-    <div className="slider-container  ">
+    <div className='h-[100%] items-center flex justify-center'>
+    <div className="slider-container w-[70%] lg:w-[60%] ">
       <Slider {...settings}>
         {data.map((item, index) => {
             const handleClick = (item) => {
@@ -107,9 +107,9 @@ function Event() {
                 navigate('/Gallery/image', { state:{smalpics:item.smalpics} });
               };
             return(
-            <div  className='p-3 ' key={index}>
+            <div  className='lg:p-3 pt-24 lg:pt-14' key={index}>
               <div onClick={()=>handleClick(item)} className='image-container rounded-2xl'>
-            <img className='h-[70vh] w-[27vw] rounded-2xl hover:opacity-50 hover:backdrop-blur-lg  hover:backdrop-brightness-[30%]'
+            <img className=' h-[60vh] w-[50vw] lg:h-[70vh] lg:w-[27vw] rounded-2xl hover:opacity-50 hover:backdrop-blur-lg  hover:backdrop-brightness-[30%]'
              src={item.src} title={item.title} />
              
              </div>

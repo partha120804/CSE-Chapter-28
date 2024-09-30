@@ -1,5 +1,4 @@
 .slider-container {
-   width:60%;
     height: 500px; 
     margin: 40px auto;
     
@@ -12,6 +11,7 @@
   .image-container {
     width: 100%; /* Make the image container responsive */
     /* Make the image container responsive */
+    height: 100%;
     object-fit: cover; /* Make the image cover the entire container */
   }
   

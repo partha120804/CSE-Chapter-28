@@ -24,19 +24,26 @@ function AboutCard(props) {
                 <p className=" text-2xl">{props.work}</p>
               </div>
               <div className="flex w-[210px] justify-around">
-               
+                {(props.Instagram)?
                 <a href={props.Instagram}  >
                 <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform" icon={faInstagram} />
                 </a>
+                :''}
+                {(props.GitHub)?
                 <a href={props.GitHub}  >
                 <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform " icon={faGithub} />
                 </a>
+                :''}
+                {(props.LinkedIn)?
                 <a href={props.LinkedIn}  >
                 <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform" icon={faLinkedin} />
                 </a>
+                :''}
+                {(props.email)?
                 <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=${props.email}`}>
                 <FontAwesomeIcon className="size-7 hover:text-[#ccfff0] duration-500 ease-in-out hover:scale-[1.1] transform" icon={faEnvelope} />
                 </a>
+                :''}
               </div>
             </div>
             </div>

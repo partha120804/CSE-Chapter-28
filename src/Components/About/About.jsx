@@ -20,8 +20,8 @@ function about() {
   <span>About Us</span>
 </h1>
 <h1 className=" text-[#d0f0ea] ml-[10%] mr-[10%] flex flex-col items-center justify-center gap-5 text-justify">
-<p className="text-2xl solway lg:text-4xl stroke text-center">Welcome to CSE Chapter'28</p>
-      <p className="text-lg solway lg:text-3xl">
+<p className="text-2xl sofia lg:text-5xl text-center text-[#004040]">Welcome to CSE Chapter'28</p>
+      <p className="text-lg font-[poppins] lg:text-3xl">
 Crafted with passion and dedication, this website is the result of hard work and creativity from our team.
 We hope this platform serves as a helpful resource for staying connected, informed, and inspired and you find it as exciting and useful as we envisioned!
 </p>

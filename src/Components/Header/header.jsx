@@ -89,7 +89,8 @@ function header() {
                 </NavLink>
               </li>
               <li>
-              <Example/>
+               <Example DropUp={DisableBar} />
+              
 
                 
               </li>

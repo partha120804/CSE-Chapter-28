@@ -11,6 +11,7 @@ import {
   faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import imageCompression from 'browser-image-compression'
 function Login({refresh}) {
   const [img,setImg]=useState();
   const [loading,setLoad]=useState(false);
@@ -23,10 +24,43 @@ function Login({refresh}) {
     })
     return data;
   }
+  const imagesize=(file)=>{
+    const reader=new FileReader();
+    reader.readAsDataURL(file);
+    //console.log(reader);
+    const promise=new Promise((resolve,reject)=>{
+      reader.onload=function(e){
+        const image =new Image();
+        image.src=e.target.result;
+        //console.log(image.src);
+        image.onload=function(){
+          const height=this.height;
+          const width=this.width;
+          console.log(height);
+          console.log(width);
+          resolve({width,height});
+        };
+        image.onerror=reject;
+      }
+    })
+    //console.log('hey');
+    return promise;
+  }
   let ImageInput=async (e)=>{
     const file=e.target.files[0];
-    const image=await imagebase64(file);
-    setImgFile(file);
+    const imageDimension=await imagesize(file);
+    //console.log('hey2');
+    //console.log(imageDimension);
+    const option={
+      maxSizeMB:2,
+      maxWidthOrHeight:imageDimension.width>1300?1300:imageDimension.width,
+      useWebWorker:true,
+    };
+    const compressedImg= await imageCompression(file,option);
+    //const newDimension= await imagesize(compressedImg);
+    //console.log(newDimension);
+    setImgFile(compressedImg);
+    const image=await imagebase64(compressedImg);
     setImg(image);
   };
   const [insta,SetInsta]=useState('');
@@ -46,7 +80,7 @@ function Login({refresh}) {
     id=user.email;
     id=id.slice(0,7);
     id=id.toUpperCase();
-    // id="B123067"
+     //id="B123067"
     year="20"+((Number)(id.slice(2,4))+4);
     const result=await axios.get(`https://cse-chapter-28-server.vercel.app/api/${year}/id?id=${id}`);
     const dt=result.data;

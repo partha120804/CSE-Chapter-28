@@ -36,7 +36,8 @@ function header() {
   };
   if (isAuthenticated) {
     const email = user.email;
-    if (email.slice(0, 2) != "b1") {
+    const BranchChange=["323027"]
+    if (email.slice(0, 2) != "b1" ) {
       alert("Email Invailid");
       logout();
     } else {
@@ -107,7 +108,7 @@ function header() {
                 </NavLink>
               </li>
 
-              {isAuthenticated? (
+              {true? (
                 <li onClick={DisableBar}>
                   <NavLink
                     to="/Profile"

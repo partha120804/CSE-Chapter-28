@@ -73,7 +73,7 @@ function header() {
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    `block pr-4 pl-3 duration-200 ${
+                    `block pr-4 pl-3 lg:duration-200 ${
                       isActive ? "textcolor underline" : "lightcolor"
                     }    hover:bg-transparent border-0  lg:p-0`
                   }
@@ -85,7 +85,7 @@ function header() {
                 <NavLink
                   to="/Gallery"
                   className={({ isActive }) =>
-                    `block pr-4 pl-3 duration-200 ${
+                    `block pr-4 pl-3 lg:duration-200 ${
                       isActive ? "textcolor underline" : "lightcolor"
                     }   hover:bg-transparent border-0  lg:p-0`
                   }
@@ -94,13 +94,13 @@ function header() {
                 </NavLink>
               </li>
               <li>
-               <Example DropUp={DisableBar} />      
+               <Example DropUp={DisableBar} />            
               </li>
               <li onClick={DisableBar}>
                 <NavLink
                   to="/About"
                   className={({ isActive }) =>
-                    `block pr-4 pl-3 duration-200 ${
+                    `block pr-4 pl-3 lg:duration-200 ${
                       isActive ? "textcolor underline" : "lightcolor"
                     }   hover:bg-transparent border-0  lg:p-0`
                   }
@@ -114,7 +114,7 @@ function header() {
                   <NavLink
                     to="/Profile"
                     className={({ isActive }) =>
-                      `block pr-4 pl-3 duration-200 ${
+                      `block pr-4 pl-3 lg:duration-200 ${
                         isActive ? "textcolor underline" : "lightcolor"
                       }   hover:bg-transparent border-0  lg:p-0`
                     }
@@ -125,7 +125,7 @@ function header() {
               ) : (
                 <li>
                   <button
-                    className="`block pr-4 pl-3 duration-200 lightcolor hover:bg-transparent border-0  lg:p-0"
+                    className="`block pr-4 pl-3 lg:duration-200 lightcolor hover:bg-transparent border-0  lg:p-0"
                     onClick={(e) => loginWithRedirect()}
                   >
                     LOGIN
@@ -136,7 +136,7 @@ function header() {
 
             <FontAwesomeIcon
               icon={faBars}
-              className="mt-[1.8rem] mx-4 h-10 text-[##004040] sm:hidden hover:cursor-pointer hover:scale-110 transition duration-300 ease-in-out"
+              className="mt-[1.8rem] mx-4 h-10 text-[##004040] sm:hidden hover:cursor-pointer hover:scale-110 transition lg:duration-300 ease-in-out"
               onClick={EnableBar}
             />
           </div>

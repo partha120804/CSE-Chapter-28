@@ -5,7 +5,7 @@ export default function Example({DropUp}) {
     <Menu as="div" className="relative inline-block text-left" 
     onClick={close} >
       <div>
-        <MenuButton className="`block pr-4 pl-3 duration-200 lightcolor hover:bg-transparent border-0  lg:p-0">
+        <MenuButton className="`block pr-4 pl-3 lg:duration-200 lightcolor hover:bg-transparent border-0  lg:p-0">
           BATCHES
         </MenuButton>
       </div>
@@ -31,7 +31,7 @@ export default function Example({DropUp}) {
                   }}
                   to="/Batches:2026"
                   className={
-                    `block px-4 py-2 text-3xl text-center text-[#0e4a3f] data-[focus]:bg-[#d1fffa80] data-[focus]:text-[#081513]  duration-200  hover:bg-transparent border-0  lg:p-0`
+                    `block px-4 py-2 text-3xl text-center text-[#0e4a3f] data-[focus]:bg-[#d1fffa80] data-[focus]:text-[#081513]  lg:duration-200  hover:bg-transparent border-0  lg:p-0`
                   }
                 >2026</NavLink>
               )}
@@ -45,7 +45,7 @@ export default function Example({DropUp}) {
                   }}
                   to="/Batches:2027"
                   className={
-                    `block px-4 py-2 text-3xl text-center text-[#0e4a3f] data-[focus]:bg-[#d1fffa80] data-[focus]:text-[#081513]  duration-200  hover:bg-transparent border-0  lg:p-0`
+                    `block px-4 py-2 text-3xl text-center text-[#0e4a3f] data-[focus]:bg-[#d1fffa80] data-[focus]:text-[#081513]  lg:duration-200  hover:bg-transparent border-0  lg:p-0`
                   }
                 >2027</NavLink>
               )}
@@ -59,7 +59,7 @@ export default function Example({DropUp}) {
                   }}
                   to="/Batches:2028"
                   className={
-                    `block px-4 text-center py-2 text-3xl text-[#0e4a3f] data-[focus]:bg-[#d1fffa80] data-[focus]:text-[#081513]  duration-200  hover:bg-transparent border-0  lg:p-0`
+                    `block px-4 text-center py-2 text-3xl text-[#0e4a3f] data-[focus]:bg-[#d1fffa80] data-[focus]:text-[#081513]  lg:duration-200  hover:bg-transparent border-0  lg:p-0`
                   }
                 >2028</NavLink>
               )}

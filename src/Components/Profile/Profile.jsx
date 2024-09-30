@@ -72,7 +72,7 @@ function Login({refresh}) {
   setLoad(false);
   FunctionToBeCalled();
 };
-  useEffect(loadApi,[refresh]);
+  useEffect(loadApi,[refresh,isAuthenticated]);
   function timeout(delay) {
     return new Promise( res => setTimeout(res, delay) );
   }

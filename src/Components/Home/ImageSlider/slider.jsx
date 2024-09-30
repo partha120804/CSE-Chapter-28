@@ -1,25 +1,33 @@
 import React, { useState } from "react";
-import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
-
+import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
+// import csetasveer from '../../../assets/gallery/BatchPics';
+import csea27 from '../../../assets/gallery/BatchPics/csea27.jpg';
+import cseb27 from '../../../assets/gallery/BatchPics/cseb27.jpg';
+import tasveer1 from '../../../assets/gallery/BatchPics/tasveer1.jpg';
+import tasveer2 from '../../../assets/gallery/BatchPics/tasveer2.jpg';
 import "./slider.css";
 
  function Slider () {
  
       
     let slides = [
-        {
-          "src": "https://picsum.photos/seed/img1/600/400",
-          "alt": "Image 1 for carousel"
-        },
-        {
-          "src": "https://picsum.photos/seed/img2/600/400",
-          "alt": "Image 2 for carousel"
-        },
-        {
-          "src": "https://picsum.photos/seed/img3/600/400",
-          "alt": "Image 3 for carousel"
-        }
-      ]
+      {
+        "src": tasveer2,
+        "alt": "Tasveer img cse2"
+      },
+      {
+        "src": csea27,
+        "alt": "CSE-A 2027"
+      },
+      {
+        "src": cseb27,
+        "alt": "CSE-B 2027"
+      },
+      {
+        "src": tasveer1,
+        "alt": "Tasveer img cse1"
+      }
+    ]
          
     
   const [slide, setSlide] = useState(0);
@@ -34,18 +42,18 @@ import "./slider.css";
 
   return (
     <div className="carousel">
-      <BsArrowLeftCircleFill onClick={prevSlide} className="arrow arrow-left " />
+      <BsArrowLeftShort onClick={prevSlide} className="arrow arrow-left " />
       {slides.map((item, idx) => {
         return (
           <img
             src={item.src}
             alt={item.alt}
             key={idx}
-            className={slide === idx ? "slide" : "slide slide-hidden"}
+            className={slide === idx ? "slide object-cover" : "slide slide-hidden"}
           />
         );
       })}
-      <BsArrowRightCircleFill
+      <BsArrowRightShort
         onClick={nextSlide}
         className="arrow arrow-right"
       />

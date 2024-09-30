@@ -94,10 +94,7 @@ function header() {
                 </NavLink>
               </li>
               <li>
-               <Example DropUp={DisableBar} />
-              
-
-                
+               <Example DropUp={DisableBar} />      
               </li>
               <li onClick={DisableBar}>
                 <NavLink

@@ -70,7 +70,7 @@ const HeaderBlock = () => {
     <h1 className="mb-2 ">
       <img className=" object-cover" src={smalpics.pic1}></img>
     </h1>
-    <p className="mt-5 mb-2 text-center text-4xl text-white sofia font-extrabold">{title}</p>
+    <p className="mt-5 mb-2 text-center text-4xl text-white solway font-bold uppercase">{title}</p>
     <div
       id="message"
       rows="8"
